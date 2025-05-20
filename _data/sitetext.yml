@@ -1,0 +1,245 @@
+header:
+    title: "Welcome to Bond Squad"
+    text: "Home Finance Game Changers"
+
+expert:
+    title: "Get pre-approved for a home loan today"
+    text: "Whether you're looking to buy or ready to put in an offer, we recommend you get pre-approved. Reach out to one of our experts now."
+    button 1 text: "Do it Yourself"
+    button 2 text: "Speak to an Expert"
+
+services:
+    title: "Services We Offer"
+    text: "We get you the best deal on your Home Loan by sourcing quotes from all the leading banks (including your own bank) for you to compare."
+    section: services
+    list:
+      - title: "Pre-qualification"
+        desc: "Contact us before you start looking at properties. With our streamlined pre-approval process, we will give you advice around your qualifying and affordability range, as well as on improving your credit and affordability profiles."
+        icon: fas fa-tasks
+        link: 
+          url: /contact
+          text: "Contact Bond Squad"
+      - title: "Bond Origination"
+        desc: "We work hard on negotiating the best possible terms and interest rates for all our clients. Complete our easy Home Loan application form, and we will ensure that all your documentation is correct to be submitted to all the banks. We liaise with all the major banks (including your own bank) to guarantee you the best interest rates and deal on your Home Loan. "
+        icon: fas fas fa-home     
+        link:
+          url: /contact
+          text: "Contact Bond Squad"
+      - title: "Insurance"
+        desc: "We offer competitive insurance products including Building Insurance and Mortgage Protection, bringing all your home loan options under one roof."
+        icon: fas fa-shield-alt
+        link: 
+          url: /contact
+          text: "Contact Bond Squad"
+
+
+articles:
+    title: "Articles"
+    text: ""
+    section: articles
+
+calculators:
+    title: "Home Loan Calculators"
+    text: "Use our Home loan Calculators to work out the size of home loan you are likely to qualify for and what your bond repayments will be."
+    section: calculators
+    list:
+      - title: "Bond Calculator"
+        desc: "Calculate the home loan you qualify for."
+        icon: fas fa-calculator
+        link: 
+          url: /affordability-calculator
+          text: "Calculate"
+      - title: "Repayment Calculator"
+        desc: "Calculate your monthly bond repayments."
+        icon: fas fa-calculator   
+        link:
+          url: /bond-calculator
+          text: "Calculate"
+      - title: "Transfer Cost Calculator"
+        desc: "Calculate your registration and transfer costs."
+        icon: fas fa-calculator   
+        link:
+          url: /transfer-cost-calculator
+          text: "Calculate"
+
+
+more-calculators:
+    title: "More Calculators"
+    text: ""
+    section: more-calculators
+    list:
+
+      - title: "Amortisation Calculator"
+        desc: "Calculate how your repayment is structured."
+        icon: fas fa-calculator   
+        link:
+          url: /amortisation-calculator
+          text: "Calculate"
+          
+      - title: "Deposit Savings Calculator"
+        desc: "Calculate how much you need to save for your deposit."
+        icon: fas fa-calculator   
+        link:
+          url: /deposit-savings-calculator
+          text: "Calculate"
+      - title: "Additional Payment Calculator"
+        desc: "Calculate your savings on your total home loan cost by paying a little extra into your bond."
+        icon: fas fa-calculator   
+        link:
+          url: /additional-payment-calculator
+          text: "Calculate"
+
+textblock:
+  title: "Why Bond Squad?"
+  text: "If you're looking to make your dream of owning your own home a reality, you've come to the right place. We can help you with every step of your home ownership journey."
+  footer: "**OUR SERVICE IS FREE WITH NO OBLIGATION OR COST TO YOU!**"
+  section: textblock
+  list:
+    - title: "We will pre-qualify you prior to you starting your search for a home."
+      image: "fas fa-circle"
+    - title: "All applications are expertly prepared and submitted on your behalf, ensuring you a hassle-free process."
+      image: "fas fa-circle"
+    - title: "Our experienced Bond Originators will liaise with all major and niche banks to ensure that we negotiate the best interest for you."
+      image: "fas fa-circle"
+    - title: "You are kept informed of the progress every step of the way."
+      image: "fas fa-circle"
+    - title: "We help you get pre-qualified upfront, before you start house-hunting. That way you will know your credit score and exactly what you can afford."
+      image: "fas fa-circle"
+    - title: "We remove all of the hassle of applying for a Home Loan by guiding you on the banks' requirements and helping you gather all the necessary documents."
+      image: "fas fa-circle"
+    - title: "We help structure a single application around your unique profile and circumstances, preparing the strongest possible application form."
+      image: "fas fa-circle"
+    - title: "We submit your application on your behalf to all the major banks, including your own bank, to get multiple competitive quotes."
+      image: "fas fa-circle"
+    - title: "We support you every step of the way by tracking your application on a daily basis and reporting back to you regularly."
+      image: "fas fa-circle"
+    - title: "We help you compare all the quotes to make sure you get the best terms on your Home Loan."
+      image: "fas fa-circle"
+    - title: "We negotiate the best interest rate possible for you, making the banks compete for your business."
+      image: "fas fa-circle"
+
+
+portfolio:
+    title: "Other Services"
+    text: "Some of our work"
+    section: portfolio
+    closebutton: "Close"
+    
+about:
+    title: "About Us"
+    text2: "Founded with a vision to make homeownership and property investment easier for everyone, Bond Squad is rooted in the commitment to personalised service. Whether you’re a first-time buyer or a seasoned property investor, or any stakeholder in the Home Loan industry, our dedication to client service sets us apart from other bond originators. 
+      <br><br>
+      Powerhouse Bond Squad founders, Hayley Craig and Lara Patterson, have joined forces to ensure our clients a guaranteed path to securing property finance at the best possible rate. 
+      <br><br>
+      Hayley is a highly successful real estate agent with an impressive career spanning over 10 years in both Residential and Commercial property sales, and Lara boasts 30 years plus in Senior Marketing and Finance roles, resulting in superior business expertise, professionalism and client service for our clients. 
+      <br><br>
+      Together with our dedicated administrative resources, we are passionate about providing personalised services, navigating the complexities of bond origination and securing the best deal for our clients."
+
+
+    text3: "TAILORED-MADE SERVICE FOR YOUR HOME OWNERSHIP JOURNEY"
+    
+clients:
+    title: Bank Partners
+    section: clients
+    max-height: 120px
+    horizontal-scrolling: "" #"yes/no"
+    list:
+      - title: "ABSA"
+        url: https://www.absa.co.za
+        logo: assets/img/clients/absa-bw.png
+
+      - title: "FNB"
+        url: https://www.fnb.co.za/
+        logo: assets/img/clients/fnb-n.png
+
+      - title: "Housing Investment Partners"
+        url: https://www.hiphousing.co.za/
+        logo: assets/img/clients/hip.jpg
+      
+      - title: "Investec"
+        url: https://www.investec.co.za/
+        logo: assets/img/clients/investec.png
+      
+      - title: "Nedbank"
+        url: https://www.nedbank.co.za
+        logo: assets/img/clients/nedbank-bw.png
+      
+      - title: "Rand Merchant Bank"
+        url: https://www.rmb.co.za
+        logo: assets/img/clients/rmb-img-n.png
+
+      - title: "Standard Bank"
+        url: https://www.standardbank.co.za/
+        logo: assets/img/clients/SBSA-bw.png
+      - title: "Sentinal Homes"
+        url: https://www.sentinelhomes.co.za/
+        logo: assets/img/clients/sentinal-homes.png
+    
+team:
+    title: "Contact Us"
+    text: We would love to hear from you and assist you in your home buying journey.
+    # subtext: Text Below the Images, also Markdown is suppoted **Bold Text Allowed**
+    section: team
+    contact: 
+    people:
+      - name: "Hayley Craig"
+        role: "Co-Owner | Bond Originator"
+        image: assets/img/team/Hayley Craig.png
+        social:
+          - url: tel:083 676 0912
+            icon: fas fa-phone
+          - url: mailto:hayley.craig@evogroup.co.za?subject=Bond Squad Website Enquiry
+            icon: fas fa-envelope
+          - url: https://wa.me/+27836760912
+            icon: fab fa-whatsapp
+
+          # - url: https://www.facebook.com/xxx
+          #   icon: fab fa-facebook-f
+          # - url: https://www.linkedin.com/in/bondapply
+          #   icon: fab fa-linkedin-in
+
+      - name: "Lara Patterson"
+        role: "Co-Owner | Bond Originator"
+        image: assets/img/team/Lara Patterson.png
+        social:
+          - url: tel:083 275 2856
+            icon: fas fa-phone
+          - url: mailto:lara.patterson@evogroup.co.za?subject=Bond Squad Website Enquiry
+            icon: fas fa-envelope
+          - url: https://wa.me/+27832752856
+            icon: fab fa-whatsapp
+          # - url: https://www.facebook.com/xxx
+          #   icon: fab fa-facebook-f
+          # - url: https://www.linkedin.com/in/bondapply
+          #   icon: fab fa-linkedin-in
+
+testimonials:
+    title: "TESTIMONIALS"
+    text: ""
+    section: testimonials
+    people:
+      - name: "Yvette Govender"
+        testimony: "I had the pleasure of working with Lara Patterson and I can confidently say that Lara’s dedication to client service is unmatched—she takes the time to listen, understand goals, and ensures that every question is answered with care. Her financial acumen always shines through, making complex concepts easy to grasp. I will definitely be referring Bond Squad to friends looking to secure bonds."
+      
+      - name: "Eldorette & Jacques Smith"
+        testimony: "Hayley from Bond Squad recently assisted us in securing a bond for a house we bought privately in Toti. She quickly sourced several competitive quotes. She was able to reverse an initial decline from our own bank and improve the terms. She went over and above, and exceeded our expectations. I would highly recommend her services. My advice to buyers would be, &quot;Don't go it alone, definitely partner with Bond Squad.&quot;."
+
+contact:
+    title: "Contact Us"
+    text: ""
+    section: team
+    
+footer:
+    legal: "Powered by evo Home Loans"
+    social:
+      # - url: https://twitter.com
+      #   icon: "fab fa-twitter"  
+      - url: https://www.facebook.com/profile.php?id=61572800446272
+        icon: "fab fa-facebook-f"
+      # - url: https://linkedin.com
+      #   icon: "fab fa-linkedin-in"
+      # - url: https://github.com/raviriley/agency-jekyll-theme
+      #   icon: "fab fa-github"
+      # - url: https://instagram.com
+      #   icon: "fab fa-instagram"
+
