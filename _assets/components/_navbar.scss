@@ -79,3 +79,65 @@
     }
   }
 }
+
+// Add this to your main SCSS file or create a new _header.scss file
+
+// Site header container (wraps both contact strip and navbar)
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+// Contact strip styles
+.contact-strip {
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+  }
+  
+  &__left, &__right {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__phone, &__login {
+    display: flex;
+    align-items: center;
+    color: #0a233c; // Dark blue color from your brand
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: $primary; // Using your primary color variable
+    }
+  }
+  
+  &__icon {
+    margin-right: 6px;
+  }
+}
+
+
+// Make navbar adjust for responsive screens
+@media (max-width: 768px) {
+  .contact-strip {
+    // Common pattern is to hide the contact strip on mobile
+    // Optional: You can keep it visible if preferred
+    display: none;
+  }
+  
+  // If contact strip is hidden, adjust body padding
+  body {
+    padding-top: 70px; // Just navbar height
+  }
+}

@@ -7,7 +7,7 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 
-$header-image: "./img/bond-squad-hero.jpg";
+$header-image: "./img/bond-studio-hero.png";
 $contact-image: "./img/contact.png";
 
 $primary: #00ACC8;
@@ -38,6 +38,7 @@ $enable-gradients:false;
 @import "components/navbar.scss";
 @import "components/client-scroll.scss";
 
+@import "layout/contact-strip";
 @import "layout/calculators.scss";
 @import "layout/clients.scss";
 @import "layout/contact.scss";

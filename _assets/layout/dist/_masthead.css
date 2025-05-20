@@ -1,0 +1,154 @@
+header.hero {
+  color: #003366;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+header.hero .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+header.hero .hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+header.hero .hero-image-container {
+  flex: 1;
+  height: 350px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-image: url("/_assets/img/bond-squad-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+header.hero .hero-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+}
+header.hero .hero-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #003366;
+  margin-bottom: 1.5rem;
+}
+header.hero .hero-subheading {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #367796;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+header.hero .hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+header.hero .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+header.hero .btn:hover {
+  transform: translateY(-2px);
+}
+header.hero .btn-primary {
+  background-color: #f1753a;
+  color: white;
+  border: none;
+}
+header.hero .btn-primary:hover {
+  background-color: #b9623a;
+}
+header.hero .btn-outline {
+  background-color: transparent;
+  color: #0056b3;
+  border: 1px solid #0056b3;
+}
+header.hero .btn-outline:hover {
+  background-color: rgba(0, 86, 179, 0.05);
+}
+header.hero .hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+header.hero .rating-brand .rating-logo {
+  height: 24px;
+  width: auto;
+}
+header.hero .rating-stars {
+  display: flex;
+  color: #FFD700;
+  font-size: 1.25rem;
+}
+header.hero .rating-count {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  header.hero {
+    padding: 3rem 0;
+  }
+  header.hero .hero-content {
+    flex-direction: column;
+  }
+  header.hero .hero-image-container,
+header.hero .hero-text-container {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  header.hero .hero-image-container {
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+  header.hero .hero-heading {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 768px) {
+  header.hero {
+    padding: 2rem 0;
+  }
+  header.hero .hero-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  header.hero .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  header.hero .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  header.hero .btn {
+    width: 100%;
+  }
+  header.hero .hero-rating {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

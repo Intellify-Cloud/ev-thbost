@@ -1,6 +1,6 @@
 header:
-    title: "Welcome to Bond Squad"
-    text: "Home Finance Game Changers"
+    title: "Get the best home loan offer"
+    text: "We submit your bond application to multiple banks, including your own, and we negotiate to secure the most competitive interest rate, ensuring massive savings over the term of your loan!"
 
 expert:
     title: "Get pre-approved for a home loan today"
@@ -18,19 +18,19 @@ services:
         icon: fas fa-tasks
         link: 
           url: /contact
-          text: "Contact Bond Squad"
+          text: "Contact Bond Studio"
       - title: "Bond Origination"
         desc: "We work hard on negotiating the best possible terms and interest rates for all our clients. Complete our easy Home Loan application form, and we will ensure that all your documentation is correct to be submitted to all the banks. We liaise with all the major banks (including your own bank) to guarantee you the best interest rates and deal on your Home Loan. "
         icon: fas fas fa-home     
         link:
           url: /contact
-          text: "Contact Bond Squad"
+          text: "The Bond Studio"
       - title: "Insurance"
         desc: "We offer competitive insurance products including Building Insurance and Mortgage Protection, bringing all your home loan options under one roof."
         icon: fas fa-shield-alt
         link: 
           url: /contact
-          text: "Contact Bond Squad"
+          text: "The Bond Studio"
 
 
 articles:
@@ -90,33 +90,25 @@ more-calculators:
           text: "Calculate"
 
 textblock:
-  title: "Why Bond Squad?"
-  text: "If you're looking to make your dream of owning your own home a reality, you've come to the right place. We can help you with every step of your home ownership journey."
+  title: "The Process:"
+  text: ""
   footer: "**OUR SERVICE IS FREE WITH NO OBLIGATION OR COST TO YOU!**"
   section: textblock
   list:
-    - title: "We will pre-qualify you prior to you starting your search for a home."
+    - title: "<strong>PLAN</strong> – Get Pre-Approved – Time to ask us questions / we’ll explain everything"
       image: "fas fa-circle"
-    - title: "All applications are expertly prepared and submitted on your behalf, ensuring you a hassle-free process."
+    - title: "<strong>DECIDE</strong> – Sign an offer to Purchase"
       image: "fas fa-circle"
-    - title: "Our experienced Bond Originators will liaise with all major and niche banks to ensure that we negotiate the best interest for you."
+    - title: "<strong>PREPARE</strong> – we obtain final required Supporting documentation from you"
       image: "fas fa-circle"
-    - title: "You are kept informed of the progress every step of the way."
+    - title: "<strong>APPLY</strong>  – we’ll apply to multiple banks (including your own bank)"
       image: "fas fa-circle"
-    - title: "We help you get pre-qualified upfront, before you start house-hunting. That way you will know your credit score and exactly what you can afford."
+    - title: "<strong>WE NEGOTIATE</strong>  – to secure the very best results from each of the banks."
       image: "fas fa-circle"
-    - title: "We remove all of the hassle of applying for a Home Loan by guiding you on the banks' requirements and helping you gather all the necessary documents."
+    - title: "<strong>YOU CHOOSE</strong>  the best home-loan offering."
       image: "fas fa-circle"
-    - title: "We help structure a single application around your unique profile and circumstances, preparing the strongest possible application form."
-      image: "fas fa-circle"
-    - title: "We submit your application on your behalf to all the major banks, including your own bank, to get multiple competitive quotes."
-      image: "fas fa-circle"
-    - title: "We support you every step of the way by tracking your application on a daily basis and reporting back to you regularly."
-      image: "fas fa-circle"
-    - title: "We help you compare all the quotes to make sure you get the best terms on your Home Loan."
-      image: "fas fa-circle"
-    - title: "We negotiate the best interest rate possible for you, making the banks compete for your business."
-      image: "fas fa-circle"
+
+
 
 
 portfolio:
@@ -126,20 +118,19 @@ portfolio:
     closebutton: "Close"
     
 about:
-    title: "About Us"
-    text2: "Founded with a vision to make homeownership and property investment easier for everyone, Bond Squad is rooted in the commitment to personalised service. Whether you’re a first-time buyer or a seasoned property investor, or any stakeholder in the Home Loan industry, our dedication to client service sets us apart from other bond originators. 
+    title: "Grant Acutt - Founder & Director of The Bond Studio"
+    text2: "Grant Acutt is a seasoned expert in the South African home loan industry, with over 20 years of experience helping individuals and families secure their dream homes.
       <br><br>
-      Powerhouse Bond Squad founders, Hayley Craig and Lara Patterson, have joined forces to ensure our clients a guaranteed path to securing property finance at the best possible rate. 
+      Our team’s commitment to excellent service and our passion for empowering clients to own their own homes have earned us a trusted name in the industry.
       <br><br>
-      Hayley is a highly successful real estate agent with an impressive career spanning over 10 years in both Residential and Commercial property sales, and Lara boasts 30 years plus in Senior Marketing and Finance roles, resulting in superior business expertise, professionalism and client service for our clients. 
+      We leverage innovative technology to deliver a streamlined, client-focused origination service, providing timely feedback to all parties throughout the home loan process.
       <br><br>
-      Together with our dedicated administrative resources, we are passionate about providing personalised services, navigating the complexities of bond origination and securing the best deal for our clients."
-
-
-    text3: "TAILORED-MADE SERVICE FOR YOUR HOME OWNERSHIP JOURNEY"
+      Whether you are an estate agent or a developer, a first-time buyer or an experienced investor, we will assist you in achieving the best results."
+    text3: ""
     
 clients:
-    title: Bank Partners
+    title: We work with all the leading banks
+    text: ""
     section: clients
     max-height: 120px
     horizontal-scrolling: "" #"yes/no"
@@ -218,11 +209,11 @@ testimonials:
     text: ""
     section: testimonials
     people:
-      - name: "Yvette Govender"
-        testimony: "I had the pleasure of working with Lara Patterson and I can confidently say that Lara’s dedication to client service is unmatched—she takes the time to listen, understand goals, and ensures that every question is answered with care. Her financial acumen always shines through, making complex concepts easy to grasp. I will definitely be referring Bond Squad to friends looking to secure bonds."
+      - name: ""
+        testimony: ""
       
-      - name: "Eldorette & Jacques Smith"
-        testimony: "Hayley from Bond Squad recently assisted us in securing a bond for a house we bought privately in Toti. She quickly sourced several competitive quotes. She was able to reverse an initial decline from our own bank and improve the terms. She went over and above, and exceeded our expectations. I would highly recommend her services. My advice to buyers would be, &quot;Don't go it alone, definitely partner with Bond Squad.&quot;."
+      - name: ""
+        testimony: ""
 
 contact:
     title: "Contact Us"
@@ -234,8 +225,8 @@ footer:
     social:
       # - url: https://twitter.com
       #   icon: "fab fa-twitter"  
-      - url: https://www.facebook.com/profile.php?id=61572800446272
-        icon: "fab fa-facebook-f"
+      #- url: https://www.facebook.com/profile.php?id=61572800446272
+      #  icon: "fab fa-facebook-f"
       # - url: https://linkedin.com
       #   icon: "fab fa-linkedin-in"
       # - url: https://github.com/raviriley/agency-jekyll-theme

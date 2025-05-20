@@ -1,22 +1,190 @@
-.brand-logo {
-  margin: 20px;
+#clients {
+  position: relative;
+  z-index: 1;
 }
-
-#clients .row {
-  margin-top: 50px;
+#clients .decorative-rings {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 }
-
-#clients img {
-  filter: #a19f8f;
-  /* IE6-9 */
-  -webkit-filter: grayscale(0);
-  /* Google Chrome, Safari 6+ & Opera 15+ */
-  filter: grayscale(0);
-  /* Microsoft Edge and Firefox 35+ */
+#clients .decorative-rings .ring {
+  position: absolute;
+  aspect-ratio: 1/1;
 }
-
-/* Disable grayscale on hover */
-#clients img:hover {
-  -webkit-filter: grayscale(0);
-  filter: none;
+#clients .decorative-rings .ring circle {
+  stroke: #008080;
+  stroke-width: 12;
+  fill: none;
+}
+#clients .decorative-rings .ring-1 {
+  top: 78%;
+  left: 5%;
+  width: 112px;
+  transform: rotate(35deg);
+  opacity: 0.02;
+}
+#clients .decorative-rings .ring-2 {
+  top: 23%;
+  left: 6%;
+  width: 177px;
+  transform: rotate(47deg);
+  opacity: 0.04;
+}
+#clients .decorative-rings .ring-3 {
+  top: 60%;
+  left: 82%;
+  width: 147px;
+  transform: rotate(-58deg);
+  opacity: 0.01;
+}
+#clients .decorative-rings .ring-4 {
+  top: 68%;
+  left: 48%;
+  width: 101px;
+  transform: rotate(46deg);
+  opacity: 0.04;
+}
+#clients .decorative-rings .ring-5 {
+  top: 61%;
+  left: 56%;
+  width: 151px;
+  transform: rotate(-50deg);
+  opacity: 0.05;
+}
+#clients .decorative-rings .ring-6 {
+  top: 3%;
+  left: 28%;
+  width: 165px;
+  transform: rotate(55deg);
+  opacity: 0.03;
+}
+#clients .decorative-rings .ring-7 {
+  top: 29%;
+  left: 4%;
+  width: 178px;
+  transform: rotate(-46deg);
+  opacity: 0.06;
+}
+#clients .decorative-rings .ring-8 {
+  top: 85%;
+  left: 27%;
+  width: 151px;
+  transform: rotate(47deg);
+  opacity: 0.03;
+}
+#clients .decorative-rings .ring-9 {
+  top: 17%;
+  left: 37%;
+  width: 153px;
+  transform: rotate(22deg);
+  opacity: 0.06;
+}
+#clients .decorative-rings .ring-10 {
+  top: 0%;
+  left: 10%;
+  width: 107px;
+  transform: rotate(-42deg);
+  opacity: 0.03;
+}
+#clients .decorative-rings .ring-11 {
+  top: 12%;
+  left: 19%;
+  width: 134px;
+  transform: rotate(18deg);
+  opacity: 0.02;
+}
+#clients .decorative-rings .ring-12 {
+  top: 45%;
+  left: 72%;
+  width: 160px;
+  transform: rotate(-33deg);
+  opacity: 0.06;
+}
+#clients .decorative-rings .ring-13 {
+  top: 38%;
+  left: 25%;
+  width: 142px;
+  transform: rotate(41deg);
+  opacity: 0.01;
+}
+#clients .decorative-rings .ring-14 {
+  top: 66%;
+  left: 9%;
+  width: 119px;
+  transform: rotate(-27deg);
+  opacity: 0.07;
+}
+#clients .decorative-rings .ring-15 {
+  top: 21%;
+  left: 88%;
+  width: 155px;
+  transform: rotate(36deg);
+  opacity: 0.03;
+}
+#clients .decorative-rings .ring-16 {
+  top: 74%;
+  left: 33%;
+  width: 123px;
+  transform: rotate(-12deg);
+  opacity: 0.06;
+}
+#clients .decorative-rings .ring-17 {
+  top: 5%;
+  left: 60%;
+  width: 168px;
+  transform: rotate(50deg);
+  opacity: 0.01;
+}
+#clients .decorative-rings .ring-18 {
+  top: 49%;
+  left: 17%;
+  width: 138px;
+  transform: rotate(-45deg);
+  opacity: 0.02;
+}
+#clients .decorative-rings .ring-19 {
+  top: 58%;
+  left: 77%;
+  width: 110px;
+  transform: rotate(-38deg);
+  opacity: 0.04;
+}
+#clients .decorative-rings .ring-20 {
+  top: 9%;
+  left: 14%;
+  width: 172px;
+  transform: rotate(43deg);
+  opacity: 0.01;
+}
+#clients .decorative-rings .ring-21 {
+  top: 80%;
+  left: 22%;
+  width: 130px;
+  transform: rotate(-20deg);
+  opacity: 0.04;
+}
+#clients .client-logo-card {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.06);
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+#clients .client-logo-card:hover {
+  transform: translateY(-4px);
+}
+#clients .client-logo-card img {
+  max-height: 50px;
+  max-width: 80px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+#clients .client-logo-card img:hover {
+  filter: grayscale(0%);
 }

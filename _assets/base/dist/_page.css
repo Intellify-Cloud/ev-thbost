@@ -1,133 +1,12 @@
-.page-section {
-  padding: 5vw 8vw;
-}
-.page-section h2.section-heading {
-  font-size: clamp(3rem, 4vw, 3rem);
-  margin-bottom: 0.618em;
-}
-.page-section h3.section-subheading, .page-section h3.textblock-subheading {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  font-weight: 400;
-  margin-bottom: 3em;
-  text-transform: none;
-  font-family: "Comfortaa", serif;
-}
-
-@media (min-width: 768px) {
-  section {
-    padding: 6.18vw 0;
-  }
-}
-::selection {
-  background: #c6f7ff;
-  text-shadow: none;
-}
-
-img::selection {
-  background: transparent;
-}
-
-.bond-calc {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-}
-
-@media (max-width: 768px) {
-  .bond-calc {
-    min-height: 120vh;
-    /* Set min-height to 115vh for mobile */
-  }
-}
-@media (max-width: 440px) {
-  .bond-calc {
-    min-height: 150vh;
-  }
-}
-.transfer-calc {
-  width: 100%;
-  height: auto;
-  min-height: 190vh;
-}
-
-@media (max-width: 768px) {
-  .transfer-calc {
-    min-height: 270vh;
-  }
-}
-@media (max-width: 440px) {
-  .transfer-calc {
-    min-height: 270vh;
-  }
-}
-.amortisation-calc {
-  width: 100%;
-  height: auto;
-  min-height: 90vh;
-}
-
-@media (max-width: 768px) {
-  .amortisation-calc {
-    min-height: 120vh;
-  }
-}
-@media (max-width: 440px) {
-  .amortisation-calc {
-    min-height: 150vh;
-  }
-}
-.additional-payment-calc {
-  width: 100%;
-  height: auto;
-  min-height: 110vh;
-}
-
-@media (max-width: 768px) {
-  .additional-payment-calc {
-    min-height: 130vh;
-  }
-}
-@media (max-width: 450px) {
-  .additional-payment-calc {
-    min-height: 200vh;
-  }
-}
-.deposit-calc {
-  width: 100%;
-  height: auto;
-  min-height: 120vh;
-}
-
-@media (max-width: 768px) {
-  .deposit-calc {
-    min-height: 130vh;
-    /* Set min-height to 115vh for mobile */
-  }
-}
-@media (max-width: 440px) {
-  .deposit-calc {
-    min-height: 175vh;
-  }
-}
-.afford-calc {
-  width: 100%;
-  height: auto;
-  min-height: 60vh;
-  max-height: unset;
-  /* Unset the max-height */
-}
-
-@media (max-width: 768px) {
-  .afford-calc {
-    min-height: 115vh;
-    /* Set min-height to 115vh for mobile */
-  }
-}
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   font-family: "Comfortaa", Arial, sans-serif;
   line-height: 1.2;
   margin-bottom: 0.618em;
+}
+
+p {
+  font-family: "Comfortaa", Arial, sans-serif;
 }
 
 h1 {
@@ -244,11 +123,113 @@ h6 {
 .page-section h2.section-heading {
   font-size: clamp(1.75rem, 5vw, 2.75rem);
   margin-bottom: 0.618em;
+  font-family: "Comfortaa", cursive;
 }
-.page-section h3.section-subheading, .page-section h3.textblock-subheading {
+.page-section h3.section-subheading,
+.page-section h3.textblock-subheading {
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 400;
   margin-bottom: 3em;
   text-transform: none;
   font-family: "Comfortaa", cursive;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 6.18vw 0;
+  }
+}
+::selection {
+  background: #c6f7ff;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+.bond-calc,
+.transfer-calc,
+.amortisation-calc,
+.additional-payment-calc,
+.deposit-calc,
+.afford-calc {
+  width: 100%;
+  height: auto;
+}
+
+.bond-calc {
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .bond-calc {
+    min-height: 120vh;
+  }
+}
+@media (max-width: 440px) {
+  .bond-calc {
+    min-height: 150vh;
+  }
+}
+.transfer-calc {
+  min-height: 190vh;
+}
+
+@media (max-width: 768px), (max-width: 440px) {
+  .transfer-calc {
+    min-height: 270vh;
+  }
+}
+.amortisation-calc {
+  min-height: 90vh;
+}
+
+@media (max-width: 768px) {
+  .amortisation-calc {
+    min-height: 120vh;
+  }
+}
+@media (max-width: 440px) {
+  .amortisation-calc {
+    min-height: 150vh;
+  }
+}
+.additional-payment-calc {
+  min-height: 110vh;
+}
+
+@media (max-width: 768px) {
+  .additional-payment-calc {
+    min-height: 130vh;
+  }
+}
+@media (max-width: 450px) {
+  .additional-payment-calc {
+    min-height: 200vh;
+  }
+}
+.deposit-calc {
+  min-height: 120vh;
+}
+
+@media (max-width: 768px) {
+  .deposit-calc {
+    min-height: 130vh;
+  }
+}
+@media (max-width: 440px) {
+  .deposit-calc {
+    min-height: 175vh;
+  }
+}
+.afford-calc {
+  min-height: 60vh;
+  max-height: unset;
+}
+
+@media (max-width: 768px) {
+  .afford-calc {
+    min-height: 115vh;
+  }
 }

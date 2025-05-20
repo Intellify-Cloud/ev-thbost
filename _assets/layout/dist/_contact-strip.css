@@ -1,0 +1,42 @@
+.contact-strip {
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+}
+.contact-strip__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+.contact-strip__left, .contact-strip__right {
+  display: flex;
+  align-items: center;
+}
+.contact-strip__phone, .contact-strip__login {
+  display: flex;
+  align-items: center;
+  color: #0a233c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.contact-strip__phone:hover, .contact-strip__login:hover {
+  color: #0057ff;
+}
+.contact-strip__icon {
+  margin-right: 6px;
+}
+.contact-strip .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-strip {
+    display: none;
+  }
+}

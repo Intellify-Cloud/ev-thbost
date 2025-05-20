@@ -1,135 +1,188 @@
 // Styling for the Hero | Masthead
 header.hero {
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), 
-    url("#{$header-image}");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: cover;
-  background-attachment: fixed; // Optimized for large screens
+  color: #003366; // Using direct color instead of variable
+  background-color: #f8f9fa;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  height: 80vh;
+  align-items: center;
   width: 100%;
-  padding: 0;
+  height: auto;
+  padding: 4rem 0;
   position: relative;
   overflow: hidden;
-  margin: 0;
-  margin-top: 70px; // Keeps consistent spacing
 
   .container {
-    position: absolute;
-    top: 70%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    padding: 0 2rem;
     width: 100%;
-    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
-  .intro-heading {
-    font-size: clamp(32px, 6vw, 64px);
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  // Left side with image
+  .hero-image-container {
+    flex: 1;
+    height: 350px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background-image: url('/_assets/img/bond-squad-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  // Right side with text
+  .hero-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .hero-heading {
+    font-size: 2.8rem;
     font-weight: 700;
     line-height: 1.2;
+    color: #003366; // Dark blue color from the image
     margin-bottom: 1.5rem;
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-    @include heading-font;
   }
 
-  .intro-lead-in {
-    font-size: clamp(20px, 4vw, 36px);
-    font-style: italic;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-    color: rgba(#fff, 0.8);
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    @include serif-font;
+  .hero-subheading {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #367796;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
-  .btn-xl {
-    padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem);
-    font-size: clamp(14px, 2vw, 18px);
-    font-weight: 700;
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
     transition: all 0.3s ease;
-
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
     }
+  }
+
+  .btn-primary {
+    background-color: #f1753a; // Blue from the image
+    color: white;
+    border: none;
+    
+    &:hover {
+      background-color: #b9623a; // Darker blue (manually darkened)
+    }
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: #0056b3;
+    border: 1px solid #0056b3;
+    
+    &:hover {
+      background-color: rgba(0, 86, 179, 0.05); // Light blue with opacity
+    }
+  }
+
+  // Rating section
+  .hero-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .rating-brand {
+    .rating-logo {
+      height: 24px;
+      width: auto;
+    }
+  }
+
+  .rating-stars {
+    display: flex;
+    color: #FFD700; // Gold color for stars
+    font-size: 1.25rem;
+  }
+
+  .rating-count {
+    color: #666;
+    font-size: 0.9rem;
   }
 }
 
-// Modern Navbar Styling
-nav {
-  background: #fff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // Softer shadow for modern look
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-// Responsive Tweaks - Standard Breakpoints
-@media (max-width: 1200px) {
-  header.hero {
-    height: 80vh;
-    .intro-heading {
-      font-size: clamp(28px, 5vw, 56px);
-    }
-  }
-}
-
+// Responsive adjustments
 @media (max-width: 992px) {
   header.hero {
-    height: 60vh;
-    background-position: right center;
-    .container {
-      top: 70%;
+    padding: 3rem 0;
+
+    .hero-content {
+      flex-direction: column;
     }
-    .intro-heading {
-      font-size: clamp(24px, 5vw, 48px);
-      margin-bottom: 1rem;
+
+    .hero-image-container,
+    .hero-text-container {
+      flex: 0 0 100%;
+      width: 100%;
     }
-    .intro-lead-in {
-      font-size: clamp(18px, 3.5vw, 32px);
+
+    .hero-image-container {
+      height: 300px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-heading {
+      font-size: 2.4rem;
     }
   }
 }
 
 @media (max-width: 768px) {
   header.hero {
-    height: 60vh;
-    background-attachment: scroll; // Improves mobile performance
-    .container {
-      padding: 0 1rem;
-    }
-    .btn-xl {
-      padding: 0.6rem 1.2rem;
-      font-size: 14px;
-    }
-  }
-}
+    padding: 2rem 0;
 
-@media (max-width: 576px) {
-  header.hero {
-    height: 50vh;
-    .container {
-      top: 70%;
+    .hero-heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
-    .intro-heading {
-      font-size: clamp(20px, 5vw, 36px);
-      margin-bottom: 0.75rem;
+
+    .hero-description {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
     }
-    .intro-lead-in {
-      font-size: clamp(16px, 3vw, 24px);
-      margin-bottom: 0.75rem;
+
+    .hero-buttons {
+      flex-direction: column;
+      gap: 0.75rem;
     }
-    .btn-xl {
-      padding: 0.5rem 1rem;
-      font-size: 18px;
+
+    .btn {
+      width: 100%;
+    }
+
+    .hero-rating {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
   }
 }
