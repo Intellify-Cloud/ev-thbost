@@ -5,12 +5,8 @@ nav:
     section: services
   - title: "About"
     section: about
-  - title: "Team"
-    section: team
   - title: "Calculators"
     section: calculators
-  - title: "Testimonials"
-    section: testimonials
   - title: "Contact"
     url: /contact
 
