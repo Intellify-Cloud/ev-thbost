@@ -4,14 +4,18 @@
 // -----------------------------
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 900;
+  font-weight: 700;
   font-family: 'Comfortaa', Arial, sans-serif;
-  line-height: 1.2;
+  line-height: 75px;
+  font-size: 68px;
   margin-bottom: 0.618em; // Golden ratio spacing
+  color: #002d62;
 }
 
 p {
+  font-size: 20px;
   font-family: 'Comfortaa', Arial, sans-serif;
+  color: #1e2839;
   // line-height: 1.8;
   // margin-bottom: 1em;
 }

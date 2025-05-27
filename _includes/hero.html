@@ -1,43 +1,43 @@
 <!-- Header -->
 <header class="hero" id="{{ site.data.sitetext.about.section | default: 'hero' }}" aria-label="Hero Section">
   <div class="container">
-      <div class="hero-content">
-          <!-- Left side - Image area -->
-          <div class="hero-image-container">
-              <!-- The image will be set in CSS -->
-          </div>
-          
-          <!-- Right side - Text content -->
-          <div class="hero-text-container">
-              {%- if site.data.sitetext.header.title -%}
-              <h2 class="hero-heading">{{ site.data.sitetext.header.title | markdownify }}</h2>
-              {%- endif -%}
-              
-              {%- if site.data.sitetext.header.text -%}
-              <h4 class="hero-subheading">{{ site.data.sitetext.header.text | markdownify }}</h4>
-              {%- endif -%}
-              
-              <div class="hero-buttons">
-                  <a class="btn btn-primary" href="#">Get pre-approved</a>
-                  <a class="btn btn-outline" href="#">Apply for a bond</a>
-              </div>
-              
-              
-              <!-- Rating section -->
-              <!-- <div class="hero-rating">
-                  <div class="rating-stars">
-                      <span class="star">★</span>
-                      <span class="star">★</span>
-                      <span class="star">★</span>
-                      <span class="star">★</span>
-                      <span class="star">★</span>
-                  </div>
-                  <div class="rating-count">
-                      4.79 from 2,108 reviews
-                  </div>
-              </div> -->
-          </div>
+    <div class="hero-content">
+      
+      <!-- Left side - Image area -->
+      <div class="hero-image-container">
+        <!-- The image is set via CSS -->
       </div>
+      
+      <!-- Right side - Text content -->
+      <div class="hero-text-container">
+        {%- if site.data.sitetext.header.title -%}
+          <h1 class="section-heading">{{ site.data.sitetext.header.title }}</h1>
+        {%- endif -%}
+        
+        {%- if site.data.sitetext.header.text -%}
+          <p class="section-subheading">{{ site.data.sitetext.header.text }}</p>
+        {%- endif -%}
+        
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#">Get pre-approved</a>
+          <a class="btn btn-outline" href="#">Apply for a bond</a>
+        </div>
+
+        <!-- Optional rating section
+        <div class="hero-rating">
+          <div class="rating-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <div class="rating-count">
+            4.79 from 2,108 reviews
+          </div>
+        </div>
+        -->
+      </>
+    </div>
   </div>
 </header>
-<!-- End Header -->

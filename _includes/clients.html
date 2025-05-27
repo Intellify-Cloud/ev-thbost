@@ -1,18 +1,10 @@
-<section class="bg-light page-section py-5 position-relative" id="clients">
+<section class="bg-light page-section py-30 position-relative" id="clients">
 
-  <!-- Decorative SVG Rings -->
-  <div class="decorative-rings">
-    {% for i in (1..19) %}
-      <svg class="ring ring-{{ i }}" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-        <circle cx="50" cy="50" r="48" />
-      </svg>
-    {% endfor %}
-  </div>
 
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h2 class="section-heading text-uppercase">
+        <h2 class="section-heading ">
           {{ site.data.sitetext.clients.title | default: "We work with all the leading banks" }}
         </h2>
         <h3 class="section-subheading text-muted">

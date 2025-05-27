@@ -50,12 +50,7 @@
         margin: 0;
         text-transform: none;
       }
-      p {
-        font-size: 16px;
-        font-style: italic;
-        margin: 0;
-        @include serif-font;
-      }
+
     }
   }
   * {
@@ -82,15 +77,14 @@
       font-size: 3em;
       margin-bottom: 15px;
     }
-    p {
-      margin-bottom: 30px;
-    }
+  
     p.item-intro {
-      font-size: 16px;
+      font-size: 20px;
       font-style: italic;
       margin: 20px 0 30px;
       @include serif-font;
     }
+
     ul.list-inline {
       margin-top: 0;
       margin-bottom: 30px;

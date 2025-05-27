@@ -1,8 +1,6 @@
 nav:
-  - title: "Why Us"
+  - title: "The Process"
     section: textblock
-  - title: "Services"
-    section: services
   - title: "About"
     section: about
   - title: "Calculators"

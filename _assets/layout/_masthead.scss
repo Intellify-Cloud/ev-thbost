@@ -1,6 +1,6 @@
 // Styling for the Hero | Masthead
 header.hero {
-  color: #003366; // Using direct color instead of variable
+  color: #003366;
   background-color: #f8f9fa;
   display: flex;
   align-items: center;
@@ -9,6 +9,15 @@ header.hero {
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
+  
+
+    .section-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    font-size: 68px;
+    margin-bottom: 1rem;
+  }
+
 
   .container {
     width: 100%;
@@ -24,11 +33,11 @@ header.hero {
     gap: 2rem;
   }
 
-  // Left side with image
   .hero-image-container {
     flex: 1;
-    height: 350px;
-    border-radius: 1.5rem;
+    height: 450px;
+    max-width: 500px;
+    border-radius: 380px 380px 1.5rem 1.5rem;
     overflow: hidden;
     background-image: url('/_assets/img/bond-squad-hero.jpg');
     background-size: cover;
@@ -46,20 +55,11 @@ header.hero {
   }
 
   .hero-heading {
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #003366; // Dark blue color from the image
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .hero-subheading {
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 400;
     margin-bottom: 2rem;
-    color: #367796;
-    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   .hero-buttons {
@@ -70,8 +70,6 @@ header.hero {
 
   .btn {
     padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -84,12 +82,12 @@ header.hero {
   }
 
   .btn-primary {
-    background-color: #f1753a; // Blue from the image
+    background-color: #f1753a;
     color: white;
     border: none;
     
     &:hover {
-      background-color: #b9623a; // Darker blue (manually darkened)
+      background-color: #b9623a;
     }
   }
 
@@ -99,7 +97,7 @@ header.hero {
     border: 1px solid #0056b3;
     
     &:hover {
-      background-color: rgba(0, 86, 179, 0.05); // Light blue with opacity
+      background-color: rgba(0, 86, 179, 0.05);
     }
   }
 
@@ -120,13 +118,11 @@ header.hero {
 
   .rating-stars {
     display: flex;
-    color: #FFD700; // Gold color for stars
-    font-size: 1.25rem;
+    color: #FFD700;
   }
 
   .rating-count {
     color: #666;
-    font-size: 0.9rem;
   }
 }
 
@@ -151,7 +147,6 @@ header.hero {
     }
 
     .hero-heading {
-      font-size: 2.4rem;
     }
   }
 }
@@ -161,12 +156,10 @@ header.hero {
     padding: 2rem 0;
 
     .hero-heading {
-      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
     .hero-description {
-      font-size: 0.9rem;
       margin-bottom: 1.5rem;
     }
 

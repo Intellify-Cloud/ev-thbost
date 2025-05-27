@@ -3,10 +3,10 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase text-center">{{ site.data.sitetext.textblock.title | markdownify }}</h2>
+        <h1 class="text-center">{{ site.data.sitetext.textblock.title }}</h1>
         
         {% if site.data.sitetext.textblock.text %}
-        <h3 class="textblock-subheading  text-center">{{ site.data.sitetext.textblock.text }}</h3>
+          <h2 class="text-center">{{ site.data.sitetext.textblock.text }}</h2>
         {% endif %}
       </div>
     </div>
@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-lg-1 text-center"></div>
       <div class="col-lg-10 text-left">
-        <div class="container section-subheading">
+        <div class="container ">
           {% for textblock in site.data.sitetext.textblock.list %}
           <div class="row align-items-center">
             {% if textblock.image %}
@@ -23,7 +23,7 @@
             </div>
             {% endif %}
             <div class="textblock-title col text-left">
-              {{ textblock.title }}
+              <p>{{ textblock.title }}</p>
             </div>
           </div>
           {% endfor %}
