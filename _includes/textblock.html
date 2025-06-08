@@ -32,12 +32,12 @@
         
         {% if site.data.sitetext.textblock.footer %}
         <div class="text-center w-100">
-          <strong>{{ site.data.sitetext.textblock.footer | markdownify }}</strong>
+          {{ site.data.sitetext.textblock.footer | markdownify }}
         </div>
         {% endif %}
-        <div class="text-center mt-4">
-          <a class="btn btn-outline-primary btn-xl text-uppercase shadow mx-2" href="#">Get pre-approved</a>
-          <a class="btn btn-outline-primary btn-xl text-uppercase shadow mx-2" href="#">Apply for a bond</a>
+        <div class="textblock-buttons">
+          <a class="btn btn-primary" href="#">Get pre-approved</a>
+          <a class="btn btn-outline" href="#">Apply for a bond</a>
         </div>
         
       </div>

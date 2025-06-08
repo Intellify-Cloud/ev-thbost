@@ -1,6 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  font-family: "Comfortaa", Arial, sans-serif;
+  font-weight: 600;
+  font-family: "Poppins", Arial, sans-serif;
   line-height: 75px;
   font-size: 68px;
   margin-bottom: 0.618em;
@@ -9,8 +9,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-size: 20px;
-  font-family: "Comfortaa", Arial, sans-serif;
-  color: #1e2839;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #003366;
 }
 
 h1 {
@@ -127,18 +127,34 @@ h6 {
 .page-section h2.section-heading {
   font-size: clamp(1.75rem, 5vw, 2.75rem);
   margin-bottom: 0.618em;
-  font-family: "Comfortaa", cursive;
+  font-family: "Poppins", cursive;
 }
 .page-section h3.section-subheading,
 .page-section h3.textblock-subheading {
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 400;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   text-transform: none;
-  font-family: "Comfortaa", cursive;
+  font-family: "Poppins", cursive;
+  line-height: normal;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767.98px) {
+  .page-section {
+    line-height: normal;
+  }
+  .page-section h2.section-heading {
+    line-height: normal;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: normal;
+  }
+
+  .textblock-title p {
+    font-size: 16px;
+  }
+
   section {
     padding: 6.18vw 0;
   }

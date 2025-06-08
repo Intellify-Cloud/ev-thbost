@@ -95,17 +95,17 @@ textblock:
   footer: "**OUR SERVICE IS FREE WITH NO OBLIGATION OR COST TO YOU!**"
   section: textblock
   list:
-    - title: "<strong>PLAN</strong> – Get Pre-Approved – Time to ask us questions / we’ll explain everything"
+    - title: "<strong>Plan</strong> – Get Pre-Approved – Time to ask us questions / we’ll explain everything"
       image: "fas fa-circle"
-    - title: "<strong>DECIDE</strong> – Sign an offer to Purchase"
+    - title: "<strong>Decide</strong> – Sign an offer to Purchase"
       image: "fas fa-circle"
-    - title: "<strong>PREPARE</strong> – we obtain final required Supporting documentation from you"
+    - title: "<strong>Prepare</strong> – we obtain final required Supporting documentation from you"
       image: "fas fa-circle"
-    - title: "<strong>APPLY</strong>  – we’ll apply to multiple banks (including your own bank)"
+    - title: "<strong>Apply</strong>  – we’ll apply to multiple banks (including your own bank)"
       image: "fas fa-circle"
-    - title: "<strong>WE NEGOTIATE</strong>  – to secure the very best results from each of the banks."
+    - title: "<strong>We negotiate</strong>  – to secure the very best results from each of the banks."
       image: "fas fa-circle"
-    - title: "<strong>YOU CHOOSE</strong>  the best home-loan offering."
+    - title: "<strong>You choose</strong>  the best home-loan offering."
       image: "fas fa-circle"
 
 

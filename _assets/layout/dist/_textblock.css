@@ -30,8 +30,60 @@
   align-items: center;
 }
 
-/* Make sure text is readable over the waves */
+.textblock-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.textblock-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  border: none;
+}
+.textblock-buttons .btn:hover {
+  transform: translateY(-2px);
+}
+.textblock-buttons .btn-primary {
+  background-color: #19a3b8;
+  color: white;
+}
+.textblock-buttons .btn-primary:hover {
+  background-color: #003366;
+}
+.textblock-buttons .btn-outline {
+  background-color: transparent;
+  color: #19a3b8;
+  border: 1px solid #19a3b8;
+}
+.textblock-buttons .btn-outline:hover {
+  background-color: rgba(0, 86, 179, 0.05);
+}
+
+.wave-container {
+  position: relative;
+}
 .wave-container .container {
   position: relative;
   z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+  .textblock-title p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .textblock-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .textblock-buttons .btn {
+    width: 100%;
+  }
 }

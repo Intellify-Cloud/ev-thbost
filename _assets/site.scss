@@ -50,13 +50,14 @@ $enable-gradients:false;
 @import "layout/team.scss";
 @import "layout/testimonials";
 @import "layout/textblock.scss";
+@import "layout/about.scss";
 
 
 
 
 body {
     overflow-x: hidden;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Poppins', cursive;
     webkit-tap-highlight-color: $primary;
 }
 
