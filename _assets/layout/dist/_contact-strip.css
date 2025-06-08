@@ -7,13 +7,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  gap: 0.5rem;
-  padding: 20px 20px;
+  min-height: 40px;
+  gap: 1.618rem;
+  /* Golden ratio spacing */
+  padding: 0.618rem 1rem;
+  /* Golden ratio vertical padding */
 }
 .contact-strip__left, .contact-strip__right {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  /* Golden ratio derived spacing */
 }
 .contact-strip__phone, .contact-strip__login {
   display: flex;
@@ -22,24 +26,82 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
-  padding: 0.8rem;
+  padding: 0.618rem 1rem;
+  /* Golden ratio padding */
 }
 .contact-strip__phone:hover, .contact-strip__login:hover {
   color: #0057ff;
 }
 .contact-strip__icon {
-  margin-right: 6px;
+  margin-right: 0.382rem;
+  /* Golden ratio derived margin */
+  flex-shrink: 0;
 }
 .contact-strip .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1rem;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
   .contact-strip {
-    display: none;
+    font-size: 12px;
+  }
+  .contact-strip__content {
+    flex-direction: column;
+    gap: 0.618rem;
+    /* Reduced golden ratio spacing for mobile */
+    padding: 0.618rem 0.5rem;
+    min-height: auto;
+  }
+  .contact-strip__left, .contact-strip__right {
+    gap: 0.618rem;
+  }
+  .contact-strip__phone, .contact-strip__login {
+    padding: 0.382rem 0.618rem;
+    /* Smaller golden ratio padding */
+    font-size: 14px;
+  }
+  .contact-strip__icon {
+    margin-right: 0.236rem;
+    /* Smaller golden ratio margin */
+  }
+  .contact-strip .container {
+    padding: 0 0.618rem;
+  }
+}
+/* Tablet adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-strip {
+    font-size: 13px;
+  }
+  .contact-strip__content {
+    gap: 1rem;
+    /* Medium golden ratio spacing */
+    padding: 0.618rem 0.8rem;
+  }
+  .contact-strip__phone, .contact-strip__login {
+    padding: 0.5rem 0.8rem;
+  }
+}
+/* Large mobile landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-strip__content {
+    gap: 1.236rem;
+    /* Scaled golden ratio */
+    padding: 0.618rem 1rem;
+  }
+}
+/* Ensure text doesn't wrap awkwardly on small screens */
+@media (max-width: 320px) {
+  .contact-strip__phone, .contact-strip__login {
+    font-size: 10px;
+    padding: 0.236rem 0.382rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
   }
 }

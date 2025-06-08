@@ -133,11 +133,11 @@
   .contact-strip {
     // Common pattern is to hide the contact strip on mobile
     // Optional: You can keep it visible if preferred
-    display: none;
+    display: block;
   }
   
   // If contact strip is hidden, adjust body padding
   body {
-    padding-top: 70px; // Just navbar height
+    //padding-top: 70px; // Just navbar height
   }
 }
