@@ -2,7 +2,6 @@
 <header class="hero" id="{{ site.data.sitetext.about.section | default: 'hero' }}" aria-label="Hero Section">
   <div class="container">
     <div class="hero-content">
-      
       <!-- Left side - Image area -->
       <div class="hero-image-container">
         <!-- The image is set via CSS -->
@@ -15,7 +14,7 @@
         {%- endif -%}
         
         {%- if site.data.sitetext.header.text -%}
-          <p class="section-subheading">{{ site.data.sitetext.header.text }}</p>
+          <p class="hero-subheading">{{ site.data.sitetext.header.text }}</p> <!-- Updated class to hero-subheading -->
         {%- endif -%}
         
         <div class="hero-buttons">
@@ -23,8 +22,11 @@
           <a class="btn btn-outline" href="/contact">Apply for a bond</a>
         </div>
 
-        <!-- Optional rating section
-        <div class="hero-rating">
+        <!-- Optional rating section -->
+        <!-- <div class="hero-rating">
+          <div class="rating-brand">
+            <img src="/assets/img/hellopeter-logo.png" alt="HelloPeter" class="rating-logo">
+          </div>
           <div class="rating-stars">
             <span class="star">★</span>
             <span class="star">★</span>
@@ -35,9 +37,8 @@
           <div class="rating-count">
             4.79 from 2,108 reviews
           </div>
-        </div>
-        -->
-      </>
+        </div> -->
+      </div>
     </div>
   </div>
 </header>

@@ -10,9 +10,8 @@ header.hero {
   overflow: hidden;
 }
 header.hero .section-heading {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 700;
-  font-size: 68px;
   margin-bottom: 1rem;
 }
 header.hero .container {
@@ -23,7 +22,6 @@ header.hero .container {
 }
 header.hero .hero-content {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 2rem;
 }
@@ -31,7 +29,8 @@ header.hero .hero-image-container {
   flex: 1;
   height: 450px;
   max-width: 500px;
-  border-radius: 380px 380px 1.5rem 1.5rem;
+  border-radius: 350px 350px 20px 20px;
+  /* Rounded corners for the image container to match the design */
   overflow: hidden;
   background-image: url("/_assets/img/bond-squad-hero.jpg");
   background-size: cover;
@@ -44,12 +43,19 @@ header.hero .hero-text-container {
   flex-direction: column;
   justify-content: center;
   padding: 1rem 0;
+  text-align: left;
+  /* Left-aligned for desktop */
 }
 header.hero .hero-heading {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #003366;
 }
 header.hero .hero-subheading {
+  font-size: 1.1rem;
+  /* Adjusted to match the smaller text size in the image */
   margin-bottom: 2rem;
+  color: #0056b3;
 }
 header.hero .hero-buttons {
   display: flex;
@@ -58,22 +64,24 @@ header.hero .hero-buttons {
 }
 header.hero .btn {
   padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 50px;
+  /* Increased border-radius for rounder buttons */
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  font-weight: 600;
 }
 header.hero .btn:hover {
   transform: translateY(-2px);
 }
 header.hero .btn-primary {
-  background-color: #f1753a;
+  background-color: #0056b3;
   color: white;
   border: none;
 }
 header.hero .btn-primary:hover {
-  background-color: #b9623a;
+  background-color: #003366;
 }
 header.hero .btn-outline {
   background-color: transparent;
@@ -95,18 +103,20 @@ header.hero .rating-brand .rating-logo {
 }
 header.hero .rating-stars {
   display: flex;
-  color: #FFD700;
+  color: #ffd700;
 }
 header.hero .rating-count {
   color: #666;
 }
 
+/* Responsive adjustments */
 @media (max-width: 992px) {
   header.hero {
     padding: 3rem 0;
   }
   header.hero .hero-content {
     flex-direction: column;
+    text-align: center;
   }
   header.hero .hero-image-container,
 header.hero .hero-text-container {
@@ -116,6 +126,16 @@ header.hero .hero-text-container {
   header.hero .hero-image-container {
     height: 300px;
     margin-bottom: 2rem;
+    max-width: 100%;
+  }
+  header.hero .section-heading {
+    font-size: 40px;
+    line-height: 44px;
+    text-align: left;
+  }
+  header.hero .hero-subheading {
+    font-size: 16px;
+    text-align: left;
   }
 }
 @media (max-width: 768px) {
@@ -125,7 +145,7 @@ header.hero .hero-text-container {
   header.hero .hero-heading {
     margin-bottom: 1rem;
   }
-  header.hero .hero-description {
+  header.hero .hero-subheading {
     margin-bottom: 1.5rem;
   }
   header.hero .hero-buttons {
