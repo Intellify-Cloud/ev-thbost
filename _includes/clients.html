@@ -19,7 +19,15 @@
           <img class="img-fluid" src="{{ client.logo }}" alt="{{ client.title }}" loading="lazy">
         </a>
       </div>
+
+      
       {% endfor %}
+
+              <h2 class="section-heading text-uppercase text-center">
+          {{ site.data.sitetext.clients.title2 | default: "EXPERIENCED, KNOWLEDGEABLE & DEDICATED TO CUSTOMER SERVICE" }}
+        </h2>
     </div>
+
+    
   </div>
 </section>

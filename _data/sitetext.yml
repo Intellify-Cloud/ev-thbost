@@ -1,12 +1,18 @@
 header:
-    title: "Get the best home loan offer"
-    text: "We submit your bond application to multiple banks, including your own, and we negotiate to secure the most competitive interest rate, ensuring massive savings over the term of your loan!"
+    title: "Secure the best home loan offer"
+    text: "We submit your bond application to multiple banks, including your own, and we negotiate to secure the most competitive interest rate, ensuring massive savings over the term of your loan. What’s more, our service is at zero cost to you – we earn a once-off fee from the banks for each registered home loan!"
 
 expert:
-    title: "Get pre-approved for a home loan today"
-    text: "Whether you're looking to buy or ready to put in an offer, we recommend you get pre-approved. Reach out to one of our experts now."
-    button 1 text: "Do it Yourself"
-    button 2 text: "Speak to an Expert"
+    title: "Buy with Confidence"
+    text: "By conducting a thorough pre-approval assessment, we assist purchasers to plan & understand the level of credit that they’ll be able to secure from the banks."
+    button 1 text: ""
+    button 2 text: ""
+
+nocharge:
+    title: "No Charge for our Service"
+    text: "We earn a once-off fee from the banks for each registered home loan. Our service is at zero cost to you."
+    button 1 text: ""
+    button 2 text: ""
 
 services:
     title: "Services We Offer"
@@ -130,7 +136,8 @@ about:
     
 clients:
     title: We work with all the leading banks
-    text: ""
+    title2: EXPERIENCED, KNOWLEDGEABLE & DEDICATED TO CUSTOMER SERVICE
+    text: 
     section: clients
     max-height: 120px
     horizontal-scrolling: "" #"yes/no"

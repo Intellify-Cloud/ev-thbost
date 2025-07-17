@@ -2,7 +2,7 @@
   background-color: $gray-100;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease-in-out;
-
+  
   .navbar-toggler {
     font-size: 15px;
     padding: 8px 12px;
@@ -14,7 +14,7 @@
       background-color: darken($primary, 10%);
     }
   }
-
+  
   .navbar-brand {
     color: $primary;
     @include script-font;
@@ -30,13 +30,13 @@
       max-width: 100%;
     }
   }
-
+  
   .navbar-nav {
     display: flex;
     gap: 0.5rem;
     .nav-item {
       .nav-link {
-        font-size: 17px;
+        font-size: 19px;
         padding: 0.5rem 1rem;
         color: #000;
         @include heading-font;
@@ -46,14 +46,13 @@
       }
     }
   }
-
-  // Mobile breakpoint (below 992px)
+  
+  // Mobile breakpoint (below 1200px)
   @media (max-width: 1200px) {
     .navbar-nav {
       flex-direction: column;
       align-items: center;
       padding: 1rem;
-      //background-color: $gray-100;
       width: 100%;
       .nav-item {
         width: 100%;
@@ -65,13 +64,23 @@
       }
     }
   }
-
-  // Desktop breakpoint (992px and up)
-  @media (min-width: 1100) {
+  
+  // Desktop breakpoint (1200px and up) - FIXED: Added 'px' unit
+  @media (min-width: 1200px) {
     padding: 0.5rem 2rem;
+    
+    // Center the navigation items on desktop
+    .navbar-nav {
+      justify-content: center;
+      flex: 1; // Take up available space between brand and right side
+      margin-left: 2rem; // Add some space from the brand
+      margin-right: 2rem; // Add some space to the right
+    }
+    
     .navbar-brand {
       font-size: 2rem;
     }
+    
     &.navbar-shrink {
       .navbar-brand {
         font-size: 1.5rem;
@@ -79,8 +88,6 @@
     }
   }
 }
-
-// Add this to your main SCSS file or create a new _header.scss file
 
 // Site header container (wraps both contact strip and navbar)
 .site-header {
@@ -112,13 +119,13 @@
   &__phone, &__login {
     display: flex;
     align-items: center;
-    color: #0a233c; // Dark blue color from your brand
+    color: #0a233c;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
     
     &:hover {
-      color: $primary; // Using your primary color variable
+      color: $primary;
     }
   }
   
@@ -127,17 +134,9 @@
   }
 }
 
-
 // Make navbar adjust for responsive screens
 @media (max-width: 768px) {
   .contact-strip {
-    // Common pattern is to hide the contact strip on mobile
-    // Optional: You can keep it visible if preferred
     display: block;
-  }
-  
-  // If contact strip is hidden, adjust body padding
-  body {
-    //padding-top: 70px; // Just navbar height
   }
 }

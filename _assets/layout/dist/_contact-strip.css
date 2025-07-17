@@ -5,7 +5,7 @@
 }
 .contact-strip__content {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   min-height: 40px;
   gap: 1.618rem;
@@ -13,23 +13,24 @@
   padding: 0.618rem 1rem;
   /* Golden ratio vertical padding */
 }
-.contact-strip__left, .contact-strip__right {
+.contact-strip__item {
   display: flex;
   align-items: center;
   gap: 1rem;
   /* Golden ratio derived spacing */
 }
-.contact-strip__phone, .contact-strip__login {
+.contact-strip__phone, .contact-strip__email, .contact-strip__whatsapp {
   display: flex;
   align-items: center;
-  color: #0a233c;
+  color: #002d78;
+  /* Updated color */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
   padding: 0.618rem 1rem;
   /* Golden ratio padding */
 }
-.contact-strip__phone:hover, .contact-strip__login:hover {
+.contact-strip__phone:hover, .contact-strip__email:hover, .contact-strip__whatsapp:hover {
   color: #0057ff;
 }
 .contact-strip__icon {
@@ -56,10 +57,10 @@
     padding: 0.618rem 0.5rem;
     min-height: auto;
   }
-  .contact-strip__left, .contact-strip__right {
+  .contact-strip__item {
     gap: 0.618rem;
   }
-  .contact-strip__phone, .contact-strip__login {
+  .contact-strip__phone, .contact-strip__email, .contact-strip__whatsapp {
     padding: 0.382rem 0.618rem;
     /* Smaller golden ratio padding */
     font-size: 14px;
@@ -82,7 +83,7 @@
     /* Medium golden ratio spacing */
     padding: 0.618rem 0.8rem;
   }
-  .contact-strip__phone, .contact-strip__login {
+  .contact-strip__phone, .contact-strip__email, .contact-strip__whatsapp {
     padding: 0.5rem 0.8rem;
   }
 }
@@ -96,7 +97,7 @@
 }
 /* Ensure text doesn't wrap awkwardly on small screens */
 @media (max-width: 320px) {
-  .contact-strip__phone, .contact-strip__login {
+  .contact-strip__phone, .contact-strip__email, .contact-strip__whatsapp {
     font-size: 10px;
     padding: 0.236rem 0.382rem;
     white-space: nowrap;
