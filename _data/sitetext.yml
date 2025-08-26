@@ -98,7 +98,7 @@ more-calculators:
 textblock:
   title: "The Process"
   text: ""
-  footer: "**OUR SERVICE IS FREE WITH NO OBLIGATION OR COST TO YOU!**"
+  footer: ""
   section: textblock
   list:
     - title: "<strong>Plan</strong> – Get Pre-Approved – Time to ask us questions / we’ll explain everything"
@@ -136,7 +136,7 @@ about:
     
 clients:
     title: We work with all the leading banks
-    title2: EXPERIENCED, KNOWLEDGEABLE & DEDICATED TO CUSTOMER SERVICE
+    title2: Experienced, Knowledgeable & Dedicated to Customer Service
     text: 
     section: clients
     max-height: 120px
@@ -172,7 +172,11 @@ clients:
       - title: "Sentinal Homes"
         url: https://www.sentinelhomes.co.za/
         logo: assets/img/clients/sentinal-homes.png
-    
+
+experienced:
+    title: Experienced, Knowledgeable & Dedicated to Customer Service
+    text: Over 20 years of experience, boasting a success ratio in excess of 95% for both self-employed and salaried applicants.
+
 team:
     title: "Contact Us"
     text: We would love to hear from you and assist you in your home buying journey.

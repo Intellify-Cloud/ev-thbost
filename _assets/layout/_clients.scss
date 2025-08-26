@@ -29,4 +29,9 @@
       }
     }
   }
+
+  // add 50px below the *last heading* in this section
+  .section-heading:last-of-type {
+    margin-bottom: 50px;
+  }
 }

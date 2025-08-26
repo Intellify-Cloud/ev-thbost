@@ -26,3 +26,6 @@
 #clients .client-logo-card img:hover {
   filter: grayscale(0%);
 }
+#clients .section-heading:last-of-type {
+  margin-bottom: 50px;
+}

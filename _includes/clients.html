@@ -1,10 +1,10 @@
-<section class="bg-light page-section py-30 position-relative" id="clients">
-
-
+<section class="bg-light page-section py-1 position-relative" id="clients">
   <div class="container">
+    
+    <!-- Top Heading -->
     <div class="row">
       <div class="col-12 text-center">
-        <h2 class="section-heading ">
+        <h2 class="section-heading">
           {{ site.data.sitetext.clients.title | default: "We work with all the leading banks" }}
         </h2>
         <h3 class="section-subheading text-muted">
@@ -12,6 +12,8 @@
         </h3>
       </div>
     </div>
+
+    <!-- Client Logos -->
     <div class="row justify-content-center mt-4 flex-wrap gap-3">
       {% for client in site.data.sitetext.clients.list %}
       <div class="client-logo-card d-flex align-items-center justify-content-center">
@@ -19,15 +21,18 @@
           <img class="img-fluid" src="{{ client.logo }}" alt="{{ client.title }}" loading="lazy">
         </a>
       </div>
-
-      
       {% endfor %}
-
-              <h2 class="section-heading text-uppercase text-center">
-          {{ site.data.sitetext.clients.title2 | default: "EXPERIENCED, KNOWLEDGEABLE & DEDICATED TO CUSTOMER SERVICE" }}
-        </h2>
     </div>
 
+<!-- Bottom Heading
+<div class="row mt-5">
+  <div class="col-12 text-center">
+    <h2 class="section-heading heading-bottom">
+      {{ site.data.sitetext.clients.title2 | default: "Experienced, Knowledgeable & Dedicated to Customer Service" }}
+    </h2> -->
     
+  </div>
+</div>
+
   </div>
 </section>
