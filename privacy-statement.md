@@ -61,7 +61,7 @@ If a third party asks us for any of your personal information, we will share it 
 #### Sanction screening 
 You consent and agree that, if we are required by the Financial Intelligence Centres Act (FICA) to do so, then:
 1. We may process your information, including personal and special personal information, to conduct sanction screening against all mandatory and non-mandatory sanctions lists 
-2. You also consent to us communicating such personal information to local and international Regulatory Bodies as well as to other entities in _____ and our partner financial institutions if you are matched to one of these sanctions lists 
+2. You also consent to us communicating such personal information to local and international Regulatory Bodies as well as to other entities in South Africa and our partner financial institutions if you are matched to one of these sanctions lists 
 
 #### Sharing personal information with {{ site.company }}.
 You confirm that we may share your personal information within the {{ site.group }} companies for all of the following: 
