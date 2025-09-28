@@ -26,9 +26,16 @@
 		<!-- Legal -->
         <div class="col-md-4">
           <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="https://evohomeloans.co.za" target="_blank" style="color: black;"></a>{{ site.data.sitetext.footer.legal | default: "" }}</a>
-            </li>
+            {% if site.data.sitetext.footer.legal %}
+              <li class="list-inline-item">
+                <a href="https://evohomeloans.co.za" target="_blank" style="color: black;">
+                  {{ site.data.sitetext.footer.legal }}
+                </a>
+              </li>
+              {% endif %}
+
+
+
           </ul>
         </div>
       </div>
