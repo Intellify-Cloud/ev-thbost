@@ -8,7 +8,7 @@ background: gray
   <!-- Main Section Title -->
   <div class="row mb-5">
     <div class="col text-center">
-      <!-- <h2 class="section-heading text-uppercase">Contact & Application</h2> -->
+    {% include contact.html %}
     </div>
   </div>
 
