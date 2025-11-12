@@ -317,7 +317,7 @@
                     phoneNumber: fields.phoneNumber.value.trim(),
                     location: fields.location.value,
                     loanOption: fields.loanOption.value,
-                    content: fields.content.value.trim()
+                    content: `(${fields.loanOption.value})<br>${fields.content.value.trim()}`
                 };
 
                 const response = await fetch(API_URL + '/v1/messages', {
