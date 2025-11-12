@@ -1,11 +1,10 @@
 <!-- Contact -->
-<section class="bg-white contact-section">
+<section class="bg-light contact-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">{{ site.data.sitetext.contact.title | markdownify | default:
-                    Contact Us }}</h2>
-                <h3 class="section-subheading text-muted">{{ site.data.sitetext.contact.text | default: "" }}</h3>
+                <h2 class="section-heading">Contact</h2>
+                <h3 class="section-subheading text-muted"></h3>
             </div>
         </div>
         <div class="row">
@@ -16,10 +15,18 @@
                         <input id="location" name="location" type="text" tabindex="-1" autocomplete="off" />
                     </div>
 
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input id="name" name="name" type="text" class="form-control" />
-                        <span class="error-message" id="error-name"></span>
+                    <div class="name-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input id="firstName" name="firstName" type="text" class="form-control" />
+                            <span class="error-message" id="error-firstName"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input id="lastName" name="lastName" type="text" class="form-control" />
+                            <span class="error-message" id="error-lastName"></span>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -31,6 +38,16 @@
                     <div class="form-group">
                         <label for="phoneNumber">Phone Number (optional)</label>
                         <input id="phoneNumber" name="phoneNumber" type="tel" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loanOption">I want to *</label>
+                        <select id="loanOption" name="loanOption" class="form-control" style="accent-color: #19a3b8;">
+                            <option value="">Please select an option</option>
+                            <option value="Get pre-approved">Get pre-approved</option>
+                            <option value="Apply for a homeloan">Apply for a homeloan</option>
+                        </select>
+                        <span class="error-message" id="error-loanOption"></span>
                     </div>
 
                     <div class="form-group">
@@ -81,7 +98,7 @@
 
     .form-control {
         width: 100%;
-        padding: 0.75rem;
+        /* padding: 0.75rem; */
         border: 1px solid #ddd;
         border-radius: 4px;
         font-size: 1rem;
@@ -91,12 +108,28 @@
 
     .form-control:focus {
         outline: none;
-        border-color: #1976d2;
+        border-color: #19a3b8;
         box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
     }
 
     .form-control.error {
         border-color: #d32f2f;
+    }
+
+    select.form-control {
+        cursor: pointer;
+        accent-color: white;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        padding-right: 2.5rem;
+
+        option {
+            background-color: white;
+            color: #333;
+            padding: 0.5rem;
+        }
     }
 
     textarea.form-control {
@@ -133,21 +166,22 @@
 
     .btn {
         padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 4px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.2s;
-        margin: 0px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        font-weight: 400;
     }
 
     .btn-primary {
-        background-color: #1976d2;
+        background-color: #19a3b8;
         color: white;
+        border: none;
     }
 
     .btn-primary:hover:not(:disabled) {
-        background-color: #1565c0;
+        transform: translateY(-1px);
     }
 
     .btn-primary:disabled {
@@ -155,9 +189,24 @@
         cursor: not-allowed;
     }
 
+    .name-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
     @media (min-width: 768px) {
         .contact-form {
             width: 50%;
+        }
+
+        .name-row {
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        .name-row .form-group {
+            flex: 1;
         }
     }
 </style>
@@ -174,16 +223,20 @@
         const statusError = document.getElementById('status-error');
 
         const fields = {
-            name: document.getElementById('name'),
+            firstName: document.getElementById('firstName'),
+            lastName: document.getElementById('lastName'),
             emailAddress: document.getElementById('emailAddress'),
             phoneNumber: document.getElementById('phoneNumber'),
             location: document.getElementById('location'),
+            loanOption: document.getElementById('loanOption'),
             content: document.getElementById('content')
         };
 
         const errors = {
-            name: document.getElementById('error-name'),
+            firstName: document.getElementById('error-firstName'),
+            lastName: document.getElementById('error-lastName'),
             emailAddress: document.getElementById('error-emailAddress'),
+            loanOption: document.getElementById('error-loanOption'),
             content: document.getElementById('error-content')
         };
 
@@ -205,8 +258,13 @@
             let isValid = true;
             clearErrors();
 
-            if (!fields.name.value.trim()) {
-                setError('name', 'Name is required');
+            if (!fields.firstName.value.trim()) {
+                setError('firstName', 'First name is required');
+                isValid = false;
+            }
+
+            if (!fields.lastName.value.trim()) {
+                setError('lastName', 'Last name is required');
                 isValid = false;
             }
 
@@ -215,6 +273,11 @@
                 isValid = false;
             } else if (!isValidEmail(fields.emailAddress.value)) {
                 setError('emailAddress', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            if (!fields.loanOption.value) {
+                setError('loanOption', 'Please select an option');
                 isValid = false;
             }
 
@@ -249,10 +312,11 @@
 
             try {
                 const body = {
-                    name: fields.name.value.trim(),
+                    name: fields.firstName.value.trim() + ' ' + fields.lastName.value.trim(),
                     emailAddress: fields.emailAddress.value.trim(),
                     phoneNumber: fields.phoneNumber.value.trim(),
                     location: fields.location.value,
+                    loanOption: fields.loanOption.value,
                     content: fields.content.value.trim()
                 };
 
@@ -288,7 +352,7 @@
         Object.keys(fields).forEach(function (key) {
             if (errors[key]) {
                 fields[key].addEventListener('input', function () {
-                    if (this.value.trim()) {
+                    if (this.value.trim() || (this.tagName === 'SELECT' && this.value)) {
                         errors[key].textContent = '';
                         this.classList.remove('error');
                     }

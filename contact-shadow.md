@@ -9,7 +9,8 @@ background: gray
   <div class="row mb-5">
     <div class="col text-center">
 
-       
+    {% include contact.html %}
+    
     </div>
   </div>
 

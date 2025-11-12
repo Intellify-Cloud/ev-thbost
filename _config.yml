@@ -32,4 +32,4 @@ url: https://evohomeloans.co.za
 
 address: Werkhuis, First Floor, Kildare Centre, 63 Main Street, Newlands, Cape Town, 7700
 
-broadsheetApiUrl: http://localhost:5113
+broadsheetApiUrl: https://ca-broadsheet-webapi.mangodesert-1e0c2940.westeurope.azurecontainerapps.io/
