@@ -216,7 +216,7 @@
         'use strict';
 
         const form = document.getElementById('contactForm');
-        const MAILER_URL = '/secret-contact-send.php';
+        const API_URL = '{{ site.broadsheetApiUrl | default: "https://api.broadsheet.intellify.co.za/" }}';
 
         const submitBtn = document.getElementById('submitBtn');
         const statusSent = document.getElementById('status-sent');
@@ -322,10 +322,11 @@
                     company: ''
                 };
 
-                const response = await fetch(MAILER_URL, {
+                const response = await fetch(API_URL, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                     },
                     body: JSON.stringify(body)
                 });
