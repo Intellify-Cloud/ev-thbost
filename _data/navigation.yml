@@ -1,0 +1,9 @@
+nav:
+  - title: "The Process"
+    section: textblock
+  - title: "About"
+    url: /about/
+  - title: "Calculators"
+    section: calculators
+  - title: "Contact"
+    url: /contact/

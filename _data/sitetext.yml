@@ -1,0 +1,300 @@
+header:
+    title: "Secure the best home loan offer."
+    text: "We submit your bond application to multiple banks, including your own, and we negotiate to secure the most competitive interest rate, ensuring massive savings over the term of your loan. What’s more, our service is at zero cost to you – we earn a once-off fee from the banks for each registered home loan!"
+    note: "Obligation-free. Our service costs you nothing – the bank pays our fee once your home loan registers."
+
+expert:
+    title: "Buy with Confidence"
+    text: "By conducting a thorough pre-approval assessment, we assist purchasers to plan & understand the level of credit that they’ll be able to secure from the banks."
+    button 1 text: ""
+    button 2 text: ""
+
+nocharge:
+    title: "No Charge for our Service"
+    text: "We earn a once-off fee from the banks for each registered home loan. Our service is at zero cost to you."
+    button 1 text: ""
+    button 2 text: "Speak to an Expert"
+
+services:
+    title: "Services We Offer"
+    text: "We get you the best deal on your Home Loan by sourcing quotes from all the leading banks (including your own bank) for you to compare."
+    section: services
+    list:
+      - title: "Pre-qualification"
+        desc: "Contact us before you start looking at properties. With our streamlined pre-approval process, we will give you advice around your qualifying and affordability range, as well as on improving your credit and affordability profiles."
+        icon: fas fa-tasks
+        link: 
+          url: /contact
+          text: "Contact Bond Studio"
+      - title: "Bond Origination"
+        desc: "We work hard on negotiating the best possible terms and interest rates for all our clients. Complete our easy Home Loan application form, and we will ensure that all your documentation is correct to be submitted to all the banks. We liaise with all the major banks (including your own bank) so that you can compare offers and choose the best home loan deal available to you. Approval, rates and final terms remain subject to each bank's assessment."
+        icon: fas fas fa-home     
+        link:
+          url: /contact
+          text: "The Bond Studio"
+      - title: "Insurance"
+        desc: "We offer competitive insurance products including Building Insurance and Mortgage Protection, bringing all your home loan options under one roof."
+        icon: fas fa-shield-alt
+        link: 
+          url: /contact
+          text: "The Bond Studio"
+
+
+articles:
+    title: "Articles"
+    text: ""
+    section: articles
+
+calculators:
+    title: "Home Loan Calculators"
+    text: "Use our Home loan Calculators to work out the size of home loan you are likely to qualify for and what your bond repayments will be."
+    section: calculators
+    list:
+      - title: "Bond Calculator"
+        desc: "Calculate the home loan you qualify for."
+        icon: fas fa-calculator
+        link: 
+          url: /affordability-calculator
+          text: "Calculate"
+      - title: "Repayment Calculator"
+        desc: "Calculate your monthly bond repayments."
+        icon: fas fa-calculator   
+        link:
+          url: /bond-calculator
+          text: "Calculate"
+      - title: "Transfer Cost Calculator"
+        desc: "Calculate your registration and transfer costs."
+        icon: fas fa-calculator   
+        link:
+          url: /transfer-cost-calculator
+          text: "Calculate"
+
+
+more-calculators:
+    title: "More Calculators"
+    text: ""
+    section: more-calculators
+    list:
+
+      - title: "Amortisation Calculator"
+        desc: "Calculate how your repayment is structured."
+        icon: fas fa-calculator   
+        link:
+          url: /amortisation-calculator
+          text: "Calculate"
+          
+      - title: "Deposit Savings Calculator"
+        desc: "Calculate how much you need to save for your deposit."
+        icon: fas fa-calculator   
+        link:
+          url: /deposit-savings-calculator
+          text: "Calculate"
+      - title: "Additional Payment Calculator"
+        desc: "Calculate your savings on your total home loan cost by paying a little extra into your bond."
+        icon: fas fa-calculator   
+        link:
+          url: /additional-payment-calculator
+          text: "Calculate"
+
+textblock:
+  title: "The Process"
+  text: ""
+  footer: ""
+  section: textblock
+  list:
+    - title: "<strong>Plan</strong> – Get Pre-Approved – Time to ask us questions / we’ll explain everything."
+      image: "fas fa-circle"
+    - title: "<strong>Decide</strong> – Sign an Offer to Purchase."
+      image: "fas fa-circle"
+    - title: "<strong>Prepare</strong> – we obtain final required supporting documentation from you."
+      image: "fas fa-circle"
+    - title: "<strong>Apply</strong>  – we’ll apply to multiple banks (including your own bank)."
+      image: "fas fa-circle"
+    - title: "<strong>We negotiate</strong>  – to secure the very best results from each of the banks."
+      image: "fas fa-circle"
+    - title: "<strong>You choose</strong>  the best home-loan offering."
+      image: "fas fa-circle"
+
+
+
+
+portfolio:
+    title: "Other Services"
+    text: "Some of our work"
+    section: portfolio
+    closebutton: "Close"
+    
+about:
+    title: "Grant Acutt - Founder & Director of The Bond Studio"
+    text2: "Grant Acutt is a seasoned expert in the South African home loan industry, with over 20 years of experience helping individuals and families secure their dream homes.
+      <br><br>
+      Our team’s commitment to excellent service and our passion for empowering clients to own their own homes have earned us a trusted name in the industry.
+      <br><br>
+      We leverage innovative technology to deliver a streamlined, client-focused origination service, providing timely feedback to all parties throughout the home loan process.
+      <br><br>
+      Whether you are an estate agent or a developer, a first-time buyer or an experienced investor, we will assist you in achieving the best results."
+    text3: ""
+    
+clients:
+    title: We work with all the leading banks
+    title2: Experienced, Knowledgeable & Dedicated to Customer Service
+    text: 
+    section: clients
+    max-height: 120px
+    horizontal-scrolling: "" #"yes/no"
+    list:
+      - title: "ABSA"
+        url: https://www.absa.co.za
+        logo: assets/img/clients/absa-bw.png
+
+      - title: "FNB"
+        url: https://www.fnb.co.za/
+        logo: assets/img/clients/fnb-n.png
+
+      - title: "Housing Investment Partners"
+        url: https://www.hiphousing.co.za/
+        logo: assets/img/clients/hip.jpg
+      
+      - title: "Investec"
+        url: https://www.investec.co.za/
+        logo: assets/img/clients/investec.png
+      
+      - title: "Nedbank"
+        url: https://www.nedbank.co.za
+        logo: assets/img/clients/nedbank-bw.png
+      
+      - title: "Rand Merchant Bank"
+        url: https://www.rmb.co.za
+        logo: assets/img/clients/rmb-img-n.png
+
+      - title: "Standard Bank"
+        url: https://www.standardbank.co.za/
+        logo: assets/img/clients/SBSA-bw.png
+      - title: "Sentinal Homes"
+        url: https://www.sentinelhomes.co.za/
+        logo: assets/img/clients/sentinal-homes.png
+
+experienced:
+    title: Experienced, Knowledgeable & Dedicated to Customer Service
+    text: Over 20 years of experience, boasting a success ratio in excess of 95% for both self-employed and salaried applicants.
+
+team:
+    title: "Contact Us"
+    text: We would love to hear from you and assist you in your home buying journey.
+    # subtext: Text Below the Images, also Markdown is suppoted **Bold Text Allowed**
+    section: team
+    contact: 
+    people:
+      - name: "Hayley Craig"
+        role: "Co-Owner | Bond Originator"
+        image: assets/img/team/Hayley Craig.png
+        social:
+          - url: tel:083 676 0912
+            icon: fas fa-phone
+          - url: mailto:hayley.craig@evogroup.co.za?subject=Bond Squad Website Enquiry
+            icon: fas fa-envelope
+          - url: https://wa.me/+27836760912
+            icon: fab fa-whatsapp
+
+          # - url: https://www.facebook.com/xxx
+          #   icon: fab fa-facebook-f
+          # - url: https://www.linkedin.com/in/bondapply
+          #   icon: fab fa-linkedin-in
+
+      - name: "Lara Patterson"
+        role: "Co-Owner | Bond Originator"
+        image: assets/img/team/Lara Patterson.png
+        social:
+          - url: tel:083 275 2856
+            icon: fas fa-phone
+          - url: mailto:lara.patterson@evogroup.co.za?subject=Bond Squad Website Enquiry
+            icon: fas fa-envelope
+          - url: https://wa.me/+27832752856
+            icon: fab fa-whatsapp
+          # - url: https://www.facebook.com/xxx
+          #   icon: fab fa-facebook-f
+          # - url: https://www.linkedin.com/in/bondapply
+          #   icon: fab fa-linkedin-in
+
+testimonials:
+    title: "TESTIMONIALS"
+    text: ""
+    section: testimonials
+    people:
+      - name: ""
+        testimony: ""
+      
+      - name: ""
+        testimony: ""
+
+contact:
+    title: "Contact Us"
+    text: ""
+    section: team
+    
+footer:
+    copyright_prefix: "Copyright"
+    description: "The Bond Studio is a bond originator based in Newlands, Cape Town. We prepare your home loan application, submit it to multiple banks including your own, and negotiate on the offers so you can compare them side by side."
+    disclaimer: "The Bond Studio is a bond originator, not a lender. We submit home loan applications to banks on your behalf. Home loan approval, interest rates and final terms are determined by each bank and remain subject to its credit assessment, affordability criteria and terms. Calculator results are estimates for guidance only and are not an offer of credit or a quotation."
+    privacy_label: "Privacy Statement"
+    privacy_url: "/privacy-statement/"
+    terms_label: "Data Sharing Agreement"
+    terms_url: "/data-sharing-agreement/"
+
+    social_label: "Social links"
+
+    sections:
+      - title: "Explore"
+        links:
+          - text: "About The Bond Studio"
+            url: "/about/"
+          - text: "The home loan process"
+            url: "/#textblock"
+          - text: "Banks we work with"
+            url: "/#clients"
+          - text: "Contact us"
+            url: "/contact/"
+
+      - title: "Calculators"
+        links:
+          - text: "Bond repayment calculator"
+            url: "/bond-calculator/"
+          - text: "Affordability calculator"
+            url: "/affordability-calculator/"
+          - text: "Bond and transfer costs"
+            url: "/transfer-cost-calculator/"
+          - text: "Deposit savings calculator"
+            url: "/deposit-savings-calculator/"
+          - text: "Amortisation calculator"
+            url: "/amortisation-calculator/"
+          - text: "Additional payment calculator"
+            url: "/additional-payment-calculator/"
+
+      - title: "Get in touch"
+        links:
+          - text: "081 303 9611"
+            url: "tel:+27813039611"
+            external: true
+          - text: "grant@thebondstudio.co.za"
+            url: "mailto:grant@thebondstudio.co.za"
+            external: true
+          - text: "Message us on WhatsApp"
+            url: "https://wa.me/27813039611"
+            external: true
+            new_tab: true
+
+    # Populate with verified profiles only. Empty list renders nothing.
+    social:
+      # - title: "LinkedIn"
+      #   url: "https://www.linkedin.com/company/example"
+      #   icon: "fab fa-linkedin-in"
+      # - title: "Facebook"
+      #   url: "https://www.facebook.com/example"
+      #   icon: "fab fa-facebook-f"
+
+    credits:
+      - text: "Powered by evo Home Loans"
+        url: "https://evohomeloans.co.za/"
+      - text: "Site by intellify"
+        url: "https://intellify.co.za"
+

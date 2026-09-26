@@ -1,0 +1,30 @@
+---
+permalink: /sitemap.xml
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- comment -%}
+  Canonical, indexable HTML pages only.
+  Excluded: noindex pages, the 404 page, and anything with sitemap:false.
+{%- endcomment -%}
+{%- assign pages = site.pages | sort: "url" -%}
+{%- for page in pages -%}
+  {%- unless page.noindex
+        or page.sitemap == false
+        or page.url contains "404"
+        or page.url contains ".xml"
+        or page.url contains ".txt"
+        or page.url contains ".json" -%}
+  <url>
+    <loc>{{ page.url | replace:'index.html','' | absolute_url }}</loc>
+    {%- if page.last_modified_at or page.date_modified %}
+    <lastmod>{{ page.last_modified_at | default: page.date_modified | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+    <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if page.url == '/' %}1.0{% elsif page.url contains 'contact' or page.url contains 'about' %}0.8{% elsif page.url contains 'calculator' %}0.7{% else %}0.4{% endif %}</priority>
+  </url>
+  {%- endunless -%}
+{%- endfor %}
+</urlset>

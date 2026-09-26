@@ -1,0 +1,301 @@
+// Styling for the footer
+//
+// Structure:
+// .footer
+// ├── .footer-main
+// │   ├── .footer-brand
+// │   │   ├── .footer-logo
+// │   │   ├── .footer-description
+// │   │   ├── .footer-address
+// │   │   └── .footer-social (optional)
+// │   └── .footer-navigation
+// │       └── .footer-column
+// ├── .footer-disclaimer
+// └── .footer-bottom
+//     ├── .footer-copyright
+//     ├── .footer-legal
+//     └── .footer-credits (optional)
+//
+// The footer stays in normal document flow. Do not reintroduce position: fixed.
+
+$footer-bg: $gray-100;
+$footer-border: $gray-300;
+$footer-muted: $gray-700;
+$footer-heading: $gray-900;
+$footer-col-gap: 2rem;
+
+.footer {
+  @include body-font;
+
+  padding: 3.5rem 0 1.5rem;
+  text-align: left;
+  background-color: $footer-bg;
+  border-top: 1px solid $footer-border;
+  color: $footer-muted;
+}
+
+// ---------------------------------------------------------------------------
+// Main area: brand + navigation
+//
+// Desktop layout is a single 4-column grid across .footer-main:
+//   brand 31% | column 23% | column 23% | column 23%
+// .footer-navigation uses `display: contents` at desktop so its child columns
+// become direct grid items of .footer-main and align to that shared track list.
+// ---------------------------------------------------------------------------
+.footer-main {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.footer-brand {
+  .footer-logo {
+    display: inline-block;
+    margin-bottom: 1rem;
+
+    img {
+      max-height: 60px;
+      width: auto;      // preserve intrinsic aspect ratio
+      height: auto;
+    }
+  }
+
+  .footer-logo-text {
+    @include heading-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $footer-heading;
+  }
+}
+
+.footer-description {
+  max-width: 42ch;          // comfortable reading measure
+  margin-bottom: 1rem;
+  font-size: 0.925rem;
+  line-height: 1.7;
+  color: $footer-muted;
+}
+
+.footer-address {
+  margin-bottom: 1rem;
+  font-size: 0.925rem;
+  font-style: normal;
+  line-height: 1.7;
+  color: $footer-muted;
+}
+
+// ---------------------------------------------------------------------------
+// Navigation columns
+// ---------------------------------------------------------------------------
+.footer-navigation {
+  display: grid;
+  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.footer-column {
+  .footer-column-title {
+    @include heading-font;
+
+    margin-bottom: 0.85rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $footer-heading;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  li + li {
+    margin-top: 0.6rem;
+  }
+
+  a {
+    font-size: 0.925rem;
+    line-height: 1.5;
+    color: $footer-muted;
+    text-decoration: none;
+    overflow-wrap: break-word;   // long emails must not cause overflow
+    word-break: break-word;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Social links (optional)
+// ---------------------------------------------------------------------------
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    color: $white;
+    background-color: $gray-700;
+    border-radius: 100%;
+    transition: background-color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      background-color: $primary;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Disclaimer
+// ---------------------------------------------------------------------------
+.footer-disclaimer {
+  max-width: 900px;
+  margin: 2.5rem 0 1.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: $gray-600;
+}
+
+// ---------------------------------------------------------------------------
+// Bottom strip
+//
+// Mobile: stacked and centred.
+// Desktop: 5 equally spaced columns (copyright, privacy, terms, and the
+// two attribution credits).
+// ---------------------------------------------------------------------------
+.footer-bottom {
+  display: grid;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $footer-border;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: $gray-600;
+
+  a {
+    color: $gray-600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.footer-bottom-item {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.footer-credit {
+  // Attribution is legible but quieter than the legal links
+  opacity: 0.85;
+}
+
+// ---------------------------------------------------------------------------
+// Responsive
+// ---------------------------------------------------------------------------
+@media (min-width: 768px) {
+  .footer-navigation {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  // Two rows of items before the 5-across desktop layout kicks in
+  .footer-bottom {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    padding-top: 4.5rem;
+  }
+
+  // Single shared grid: brand 31% + three 23% navigation columns.
+  // Percentages total 100%, so gaps are subtracted from the tracks via
+  // calc() to keep the row exactly the width of the container.
+  .footer-main {
+    gap: 2.5rem $footer-col-gap;
+    grid-template-columns:
+      calc(31% - #{$footer-col-gap * 0.75})
+      calc(23% - #{$footer-col-gap * 0.75})
+      calc(23% - #{$footer-col-gap * 0.75})
+      calc(23% - #{$footer-col-gap * 0.75});
+    align-items: start;
+  }
+
+  // Let the three .footer-column children participate in .footer-main's grid
+  // directly, so they line up with the 23% tracks defined above.
+  .footer-navigation {
+    display: contents;
+  }
+
+  // 5 equally spaced columns
+  .footer-bottom {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 2.5rem;      // separates the 4-col row from the 5-col strip
+    padding-top: 1.5rem;     // extra breathing room above the top border
+  }
+
+  .footer-bottom-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+  }
+
+  // The 31% track already constrains the measure at this width
+  .footer-description {
+    max-width: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Floating WhatsApp button (unrelated to the footer block)
+// ---------------------------------------------------------------------------
+.whatsapp {
+  position: fixed;
+  right: 8px;
+  top: 85%;
+}
+
+.whatsapp h5 {
+  color: rgb(255, 255, 255);
+  background: #20b20f;
+  padding: 8px;
+  border-radius: 10px;
+}

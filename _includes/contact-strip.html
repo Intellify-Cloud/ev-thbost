@@ -1,0 +1,22 @@
+<!-- _includes/contact-strip.html -->
+<div class="contact-strip">
+    <div class="container">
+        <div class="contact-strip__content" style="display: flex; justify-content: flex-end; gap: 2rem;">
+            <div class="contact-strip__item" style="text-align: right;">
+                <a href="tel:{{ site.telephone }}" class="contact-strip__phone">
+                    <i class="fas fa-phone contact-strip__icon" aria-hidden="true"></i> {{ site.telephone_display }}
+                </a>
+            </div>
+            <div class="contact-strip__item" style="text-align: right;">
+                <a href="mailto:{{ site.email }}" class="contact-strip__email">
+                    <i class="fas fa-envelope contact-strip__icon" aria-hidden="true"></i> {{ site.email }}
+                </a>
+            </div>
+            <div class="contact-strip__item" style="text-align: right;">
+                <a href="{{ site.whatsapp }}" class="contact-strip__whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp contact-strip__icon" aria-hidden="true"></i> Message via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,117 @@
+{%- assign f = site.data.sitetext.footer -%}
+
+<footer class="footer" id="footer">
+  <div class="container">
+
+    <!-- Main footer area -->
+    <div class="footer-main">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a class="footer-logo" href="{{ '/' | relative_url }}" aria-label="{{ site.company }} home">
+          {%- if site.logo -%}
+          <img src="{{ site.logo.path | relative_url }}"
+               alt="{{ site.company }} - bond originators in {{ site.address.city }}"
+               width="180" height="60">
+          {%- else -%}
+          <span class="footer-logo-text">{{ site.company }}</span>
+          {%- endif -%}
+        </a>
+
+        {%- if f.description %}
+        <p class="footer-description">{{ f.description }}</p>
+        {%- endif %}
+
+        <address class="footer-address">
+          {{ site.address.street }}<br>
+          {{ site.address.suburb }}, {{ site.address.city }}, {{ site.address.postcode }}
+        </address>
+
+        {%- comment -%} Render social block only when profiles are configured {%- endcomment -%}
+        {%- if f.social and f.social.size > 0 %}
+        <ul class="footer-social list-unstyled" aria-label="{{ f.social_label | default: 'Social links' }}">
+          {%- for link in f.social -%}
+            {%- if link.url and link.url != "" %}
+          <li>
+            <a href="{{ link.url }}" target="_blank" rel="noopener" aria-label="{{ site.company }} on {{ link.title }}">
+              {%- if link.icon %}<i class="{{ link.icon }}" aria-hidden="true"></i>{% endif -%}
+              <span class="sr-only">{{ link.title }}</span>
+            </a>
+          </li>
+            {%- endif -%}
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </div>
+
+      <!-- Navigation columns -->
+      {%- if f.sections and f.sections.size > 0 %}
+      <nav class="footer-navigation" aria-label="Footer navigation">
+        {%- for section in f.sections %}
+        <div class="footer-column">
+          <h2 class="footer-column-title">{{ section.title }}</h2>
+          <ul class="list-unstyled">
+            {%- for link in section.links %}
+            <li>
+              <a href="{% if link.external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
+                 {%- if link.new_tab %} target="_blank" rel="noopener"{% endif %}>
+                {{ link.text }}
+              </a>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endfor %}
+      </nav>
+      {%- endif %}
+
+    </div>
+
+    <!-- Financial services disclaimer -->
+    <!-- <p class="footer-disclaimer">
+      {{ site.company }} is a bond originator, not a lender. We submit home loan
+      applications to banks on your behalf. Home loan approval, interest rates and final
+      terms are determined by each bank and remain subject to its credit assessment,
+      affordability criteria and terms. Calculator results are estimates for guidance only
+      and are not an offer of credit or a quotation.
+    </p> -->
+
+    <!-- Bottom strip: 5 equally spaced items on desktop -->
+    <div class="footer-bottom">
+      <span class="footer-bottom-item footer-copyright">
+        {{ f.copyright_prefix | default: "Copyright" }} &copy; {{ site.company }} {{ 'now' | date: "%Y" }}
+      </span>
+
+      {%- if f.privacy_url %}
+      <span class="footer-bottom-item">
+        <a href="{{ f.privacy_url | relative_url }}">{{ f.privacy_label | default: "Privacy Policy" }}</a>
+      </span>
+      {%- endif %}
+
+      {%- if f.terms_url %}
+      <span class="footer-bottom-item">
+        <a href="{{ f.terms_url | relative_url }}">{{ f.terms_label | default: "Terms and Conditions" }}</a>
+      </span>
+      {%- endif %}
+
+      {%- comment -%}
+        Credits are attribution only. They must never be confused with site.url,
+        which remains the canonical host for metadata, sitemap and structured data.
+      {%- endcomment -%}
+      
+      {%- for credit in f.credits %}
+      <span class="footer-bottom-item footer-credit">
+        
+        {%- if credit.url %}
+        <a href="{{ credit.url }}" target="_blank" rel="noopener">{{ credit.text }}</a>
+        
+        {%- else -%}
+        {{ credit.text }}
+        {%- endif %}
+      
+      </span>
+      {%- endfor %}
+    </div>
+
+  </div>
+</footer>

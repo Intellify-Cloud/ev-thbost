@@ -1,0 +1,42 @@
+<section class="bg-light page-section py-1 position-relative" id="clients">
+  <div class="container">
+    
+    <!-- Top Heading -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-heading">
+          {{ site.data.sitetext.clients.title | default: "We work with all the leading banks" }}
+        </h2>
+        <p class="section-subheading text-muted">
+          {{ site.data.sitetext.clients.text | default: "" }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Client Logos -->
+    <div class="row justify-content-center mt-4 flex-wrap gap-3">
+      {% for client in site.data.sitetext.clients.list %}
+      <div class="client-logo-card d-flex align-items-center justify-content-center">
+        <a href="{{ client.url | default: '#' }}" target="_blank" rel="noopener noreferrer" class="client-logo-link">
+          <img class="img-fluid client-logo-image"
+               src="{{ client.logo | relative_url }}"
+               alt="{{ client.title }} - home loan partner of {{ site.company }}"
+               width="180" height="90"
+               loading="lazy" decoding="async">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+<!-- Bottom Heading
+<div class="row mt-5">
+  <div class="col-12 text-center">
+    <h2 class="section-heading heading-bottom">
+      {{ site.data.sitetext.clients.title2 | default: "Experienced, Knowledgeable & Dedicated to Customer Service" }}
+    </h2> -->
+    
+  </div>
+</div>
+
+  </div>
+</section>

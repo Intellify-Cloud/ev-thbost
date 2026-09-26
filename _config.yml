@@ -1,0 +1,117 @@
+# ---------------------------------------------------------------------------
+# Site identity
+# ---------------------------------------------------------------------------
+# NOTE: `url` must match the CNAME file and the live production domain.
+# Never point this at a localhost, preview or legacy domain: it is the source
+# of truth for canonical tags, Open Graph URLs, structured data and sitemap.
+url    : https://thebondstudio.co.za
+baseurl: ""
+
+title      : "The Bond Studio"
+tagline    : "Bond Origination & Home Loan Experts"
+description: "The Bond Studio is a bond originator in Cape Town. We submit your home loan application to multiple banks, including your own, and negotiate your interest rate. Free to you."
+
+locale     : en_ZA
+lang       : en-ZA
+
+author     : E.Roux / P.Oosthuizen
+
+# ---------------------------------------------------------------------------
+# Business details (single source of truth - used in structured data + footer)
+# ---------------------------------------------------------------------------
+company      : The Bond Studio
+group        : The Bond Studio
+legal_name   : The Bond Studio
+business_type: Bond originator          # NOT a lender - we submit to banks
+parent_group : evo Home Loans
+parent_url   : https://evohomeloans.co.za
+
+email    : grant@thebondstudio.co.za
+telephone: "+27813039611"
+telephone_display: "081 303 9611"
+whatsapp : "https://wa.me/27813039611"
+
+address:
+  street  : "Werkhuis, First Floor, Kildare Centre, 63 Main Street"
+  suburb  : "Newlands"
+  city    : "Cape Town"
+  region  : "Western Cape"
+  postcode: "7700"
+  country : "ZA"
+
+geo:
+  latitude : -33.9769
+  longitude: 18.4553
+
+service_area:
+  - Cape Town
+  - Western Cape
+  - South Africa
+
+opening_hours:
+  - days: ["Monday","Tuesday","Wednesday","Thursday","Friday"]
+    opens: "08:30"
+    closes: "17:00"
+
+# Social profiles - add verified URLs only (used for schema sameAs)
+social:
+  facebook : ""
+  linkedin : ""
+  instagram: ""
+
+logo:
+  path: /assets/img/logo/bond-squad-logo.png
+
+# Default social sharing image (must exist at site root)
+og_image: /social_916x509.jpg
+
+# ---------------------------------------------------------------------------
+# Search engine / webmaster verification
+# ---------------------------------------------------------------------------
+# Add the token only (not the full meta tag). Leave blank to omit the tag.
+google_site_verification: ""
+bing_site_verification  : ""
+# IndexNow key: create /<key>.txt at the site root containing the same key.
+indexnow_key            : ""
+
+analytics:
+  google: G-XXX
+
+# ---------------------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------------------
+collections:
+  portfolio:
+    output: false
+
+markdown: kramdown
+
+sass:
+  style: compressed
+
+webserver_headers:
+  - - Access-Control-Allow-Origin
+    - "*"
+  - - Access-Control-Allow-Methods
+    - GET, OPTIONS, HEAD
+
+exclude:
+  - node_modules
+  - webpack.config.js
+  - webpack-config.js
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - seo-guru.md
+  - _assets
+  - "favicon(old).png"
+
+broadsheetApiUrl: https://api.broadsheet.intellify.co.za/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      noindex: false

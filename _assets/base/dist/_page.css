@@ -1,0 +1,315 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 75px;
+  font-size: 68px;
+  margin-bottom: 0.618em;
+  color: #002d62;
+}
+
+p {
+  font-size: 20px;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #003366;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.65rem;
+  }
+
+  h4 {
+    font-size: 1.35rem;
+  }
+
+  h5 {
+    font-size: 1.15rem;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.65rem;
+  }
+
+  h5 {
+    font-size: 1.35rem;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 2.25rem;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+}
+.page-section {
+  padding: 5vw 2vw;
+}
+.page-section h2.section-heading {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  margin-bottom: 0.618em;
+  margin-top: 0.618em;
+  font-family: "Poppins", cursive;
+}
+.page-section h3.section-subheading,
+.page-section h3.textblock-subheading {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  margin-bottom: 1em;
+  text-transform: none;
+  font-family: "Poppins", cursive;
+  line-height: normal;
+}
+
+@media (max-width: 767.98px) {
+  .page-section {
+    line-height: normal;
+  }
+  .page-section h2.section-heading {
+    line-height: normal;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: normal;
+  }
+
+  .textblock-title p {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 6.18vw 0;
+  }
+}
+::selection {
+  background: #c6f7ff;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+.bond-calc,
+.transfer-calc,
+.amortisation-calc,
+.additional-payment-calc,
+.deposit-calc,
+.afford-calc {
+  width: 100%;
+  height: auto;
+}
+
+.bond-calc {
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .bond-calc {
+    min-height: 120vh;
+  }
+}
+@media (max-width: 440px) {
+  .bond-calc {
+    min-height: 150vh;
+  }
+}
+.transfer-calc {
+  min-height: 1400px;
+}
+
+@media (max-width: 768px), (max-width: 440px) {
+  .transfer-calc {
+    min-height: 270vh;
+  }
+}
+.amortisation-calc {
+  min-height: 90vh;
+}
+
+@media (max-width: 768px) {
+  .amortisation-calc {
+    min-height: 120vh;
+  }
+}
+@media (max-width: 440px) {
+  .amortisation-calc {
+    min-height: 150vh;
+  }
+}
+.additional-payment-calc {
+  min-height: 110vh;
+}
+
+@media (max-width: 768px) {
+  .additional-payment-calc {
+    min-height: 130vh;
+  }
+}
+@media (max-width: 450px) {
+  .additional-payment-calc {
+    min-height: 200vh;
+  }
+}
+.deposit-calc {
+  min-height: 120vh;
+}
+
+@media (max-width: 768px) {
+  .deposit-calc {
+    min-height: 130vh;
+  }
+}
+@media (max-width: 440px) {
+  .deposit-calc {
+    min-height: 175vh;
+  }
+}
+.afford-calc {
+  min-height: 940px;
+  max-height: unset;
+}
+
+@media (max-width: 768px) {
+  .afford-calc {
+    min-height: 115vh;
+  }
+}
+.calculator-writeup {
+  max-width: 920px;
+  margin: 3rem auto 4.5rem;
+  padding: 2.5rem 0 0;
+  border-top: 1px solid rgba(0, 51, 102, 0.16);
+}
+.calculator-writeup h2 {
+  margin: 0 0 0.75rem;
+  color: #002d62;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  line-height: 1.25;
+}
+.calculator-writeup p {
+  max-width: 78ch;
+  margin: 0 0 1.65rem;
+  color: #21415f;
+  font-size: 18px;
+  line-height: 1.75;
+}
+.calculator-writeup strong {
+  color: #002d62;
+  font-weight: 600;
+}
+.calculator-writeup a {
+  color: #008fa3;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 143, 163, 0.28);
+  text-underline-offset: 0.18em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.calculator-writeup a:hover, .calculator-writeup a:focus {
+  color: #005f73;
+  text-decoration-color: currentColor;
+}
+.calculator-writeup p:last-child {
+  max-width: none;
+  margin-top: 2.25rem;
+  margin-bottom: 0;
+  padding: 1.15rem 1.25rem;
+  border-left: 4px solid #00acc8;
+  background: #f4fbfd;
+  color: #003366;
+  line-height: 1.65;
+}
+
+@media (max-width: 767.98px) {
+  .calculator-writeup {
+    margin: 2rem auto 3rem;
+    padding-top: 1.75rem;
+  }
+  .calculator-writeup p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .calculator-writeup p:last-child {
+    padding: 1rem;
+  }
+}

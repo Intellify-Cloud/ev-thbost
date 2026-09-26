@@ -1,0 +1,39 @@
+---
+permalink: /robots.txt
+layout: null
+sitemap: false
+---
+# robots.txt for {{ site.title }}
+# Bond origination - {{ site.address.city }}, South Africa
+
+# Default: allow all legitimate crawlers full access.
+# CSS, JS and images must stay crawlable for rendering and Core Web Vitals.
+User-agent: *
+Allow: /
+Disallow: /assets/bundle.js.LICENSE.txt
+
+# AI answer engines are intentionally allowed so the business can be cited
+# accurately in AI Overviews, Copilot and other assistants. Remove or set to
+# Disallow only as an explicit, documented business decision.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
