@@ -14,7 +14,7 @@
   bottom: 0;
   /* Reference the SCSS source, never a content-hashed webpack output, so a
      rebuild cannot leave this pointing at a stale hash. */
-  background-image: url('../img/bond-studio-hero.png');
+  background-image: url('./img/bond-studio-hero.png');
   background-repeat: repeat;
   background-size: 250px auto;
   //filter: blur(1px);
