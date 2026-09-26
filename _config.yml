@@ -80,6 +80,14 @@ analytics:
 # ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
+# DO NOT add a `.nojekyll` file at the repo root.
+# This site is published by GitHub Pages as *Jekyll source*, not as a prebuilt
+# `_site` folder (`_site` is gitignored and never committed). A `.nojekyll`
+# file disables Jekyll processing, so GitHub Pages then publishes the raw
+# source tree instead: page front matter and Liquid tags become visible text,
+# `permalink` pretty URLs (`/about/`, `/contact-test/`) 404, and internal files
+# such as `_config.yml`, `*.md` and `docs/` are exposed publicly.
+# Always deploy the Jekyll build output, never the repository root.
 collections:
   portfolio:
     output: false
@@ -107,6 +115,18 @@ exclude:
   - seo-guru.md
   - _assets
   - "favicon(old).png"
+  # Internal project and tooling files - must never be published to the web.
+  # (Anything starting with "_" or "." is already ignored by Jekyll, but these
+  # are listed explicitly so the intent is documented and protected.)
+  - docs
+  - jekyll-serve.out.log
+  - jekyll-serve.err.log
+  - .devcontainer
+  - .github
+  - .kilo
+  - .vscode
+  - .gitattributes
+  - .gitignore
 
 broadsheetApiUrl: https://api.broadsheet.intellify.co.za/
 
