@@ -128,7 +128,7 @@ exclude:
   - .gitattributes
   - .gitignore
 
-broadsheetApiUrl: https://api.broadsheet.intellify.co.za/
+broadsheetApiUrl: https://api.broadsheet.intellify.co.za/v1/messages
 
 defaults:
   - scope:

@@ -216,7 +216,7 @@
         'use strict';
 
         const form = document.getElementById('contactForm');
-        const API_URL = '{{ site.broadsheetApiUrl | default: "https://api.broadsheet.intellify.co.za/" }}';
+        const API_URL = '{{ site.broadsheetApiUrl | default: "https://api.broadsheet.intellify.co.za/v1/messages" }}';
 
         const submitBtn = document.getElementById('submitBtn');
         const statusSent = document.getElementById('status-sent');
@@ -312,14 +312,12 @@
 
             try {
                 const body = {
-                    type: 'contact',
-                    name: fields.firstName.value.trim() + ' ' + fields.lastName.value.trim(),
-                    email: fields.emailAddress.value.trim(),
-                    phone: fields.phoneNumber.value.trim(),
-                    location: fields.location.value,
                     subject: fields.loanOption.value,
-                    message: `${fields.loanOption.value}\n\n${fields.content.value.trim()}`,
-                    company: ''
+                    name: fields.firstName.value.trim() + ' ' + fields.lastName.value.trim(),
+                    emailAddress: fields.emailAddress.value.trim(),
+                    phoneNumber: fields.phoneNumber.value.trim(),
+                    location: fields.location.value,
+                    content: fields.content.value.trim()
                 };
 
                 const response = await fetch(API_URL, {
