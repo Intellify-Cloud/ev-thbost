@@ -18,12 +18,9 @@ background: gray
     </p>
   </header>
 
-  {% comment %}
-  Contact form disabled because it is not currently sending email.
   <div class="contact-page__form">
     {% include contact.html %}
   </div>
-  {% endcomment %}
 
   <section class="contact-page__grid" aria-label="Contact options">
     <article class="contact-card contact-card--primary">

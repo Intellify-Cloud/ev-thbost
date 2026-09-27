@@ -15,18 +15,10 @@
                         <input id="location" name="location" type="text" tabindex="-1" autocomplete="off" />
                     </div>
 
-                    <div class="name-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input id="firstName" name="firstName" type="text" class="form-control" />
-                            <span class="error-message" id="error-firstName"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input id="lastName" name="lastName" type="text" class="form-control" />
-                            <span class="error-message" id="error-lastName"></span>
-                        </div>
+                    <div class="form-group">
+                        <label for="fullName">Name and Surname *</label>
+                        <input id="fullName" name="fullName" type="text" class="form-control" autocomplete="name" />
+                        <span class="error-message" id="error-fullName"></span>
                     </div>
 
                     <div class="form-group">
@@ -189,24 +181,9 @@
         cursor: not-allowed;
     }
 
-    .name-row {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
     @media (min-width: 768px) {
         .contact-form {
             width: 50%;
-        }
-
-        .name-row {
-            flex-direction: row;
-            gap: 1rem;
-        }
-
-        .name-row .form-group {
-            flex: 1;
         }
     }
 </style>
@@ -223,8 +200,7 @@
         const statusError = document.getElementById('status-error');
 
         const fields = {
-            firstName: document.getElementById('firstName'),
-            lastName: document.getElementById('lastName'),
+            fullName: document.getElementById('fullName'),
             emailAddress: document.getElementById('emailAddress'),
             phoneNumber: document.getElementById('phoneNumber'),
             location: document.getElementById('location'),
@@ -233,8 +209,7 @@
         };
 
         const errors = {
-            firstName: document.getElementById('error-firstName'),
-            lastName: document.getElementById('error-lastName'),
+            fullName: document.getElementById('error-fullName'),
             emailAddress: document.getElementById('error-emailAddress'),
             loanOption: document.getElementById('error-loanOption'),
             content: document.getElementById('error-content')
@@ -258,13 +233,8 @@
             let isValid = true;
             clearErrors();
 
-            if (!fields.firstName.value.trim()) {
-                setError('firstName', 'First name is required');
-                isValid = false;
-            }
-
-            if (!fields.lastName.value.trim()) {
-                setError('lastName', 'Last name is required');
+            if (!fields.fullName.value.trim()) {
+                setError('fullName', 'Name and surname is required');
                 isValid = false;
             }
 
@@ -313,7 +283,7 @@
             try {
                 const body = {
                     subject: fields.loanOption.value,
-                    name: fields.firstName.value.trim() + ' ' + fields.lastName.value.trim(),
+                    name: fields.fullName.value.trim(),
                     emailAddress: fields.emailAddress.value.trim(),
                     phoneNumber: fields.phoneNumber.value.trim(),
                     location: fields.location.value,
