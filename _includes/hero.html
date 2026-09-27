@@ -4,7 +4,14 @@
     <div class="hero-content">
       <!-- Left side - Image area -->
       <div class="hero-image-container">
-        <!-- The image is set via CSS -->
+        <img class="hero-image"
+             src="{{ '/assets/hero/homeowner-with-dog-at-window.jpg' | relative_url }}"
+             srcset="{{ '/assets/hero/homeowner-with-dog-at-window-800.jpg' | relative_url }} 800w,
+                     {{ '/assets/hero/homeowner-with-dog-at-window.jpg' | relative_url }} 1200w"
+             sizes="(max-width: 992px) 100vw, 500px"
+             width="1200" height="950"
+             alt="Smiling woman playing with her dog by the window of her home"
+             fetchpriority="high" decoding="async">
       </div>
       
       <!-- Right side - Text content -->
