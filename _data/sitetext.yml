@@ -178,44 +178,6 @@ experienced:
     title: Experienced, Knowledgeable & Dedicated to Customer Service
     text: Over 20 years of experience, boasting a success ratio in excess of 95% for both self-employed and salaried applicants.
 
-team:
-    title: "Contact Us"
-    text: We would love to hear from you and assist you in your home buying journey.
-    # subtext: Text Below the Images, also Markdown is suppoted **Bold Text Allowed**
-    section: team
-    contact: 
-    people:
-      - name: "Hayley Craig"
-        role: "Co-Owner | Bond Originator"
-        image: assets/img/team/Hayley Craig.png
-        social:
-          - url: tel:083 676 0912
-            icon: fas fa-phone
-          - url: mailto:hayley.craig@evogroup.co.za?subject=Home Loan Enquiry | TheBondStudio Website
-            icon: fas fa-envelope
-          - url: https://wa.me/+27836760912
-            icon: fab fa-whatsapp
-
-          # - url: https://www.facebook.com/xxx
-          #   icon: fab fa-facebook-f
-          # - url: https://www.linkedin.com/in/bondapply
-          #   icon: fab fa-linkedin-in
-
-      - name: "Lara Patterson"
-        role: "Co-Owner | Bond Originator"
-        image: assets/img/team/Lara Patterson.png
-        social:
-          - url: tel:083 275 2856
-            icon: fas fa-phone
-          - url: mailto:lara.patterson@evogroup.co.za?subject=Home Loan Enquiry | TheBondStudio Website
-            icon: fas fa-envelope
-          - url: https://wa.me/+27832752856
-            icon: fab fa-whatsapp
-          # - url: https://www.facebook.com/xxx
-          #   icon: fab fa-facebook-f
-          # - url: https://www.linkedin.com/in/bondapply
-          #   icon: fab fa-linkedin-in
-
 testimonials:
     title: "TESTIMONIALS"
     text: ""
