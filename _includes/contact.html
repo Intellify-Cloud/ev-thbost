@@ -36,8 +36,8 @@
             <label for="loanOption">I want to *</label>
             <select id="loanOption" name="loanOption" class="form-control">
                 <option value="">Please select an option</option>
-                <option value="Start a home loan enquiry">Start a home loan enquiry</option>
-                <option value="Compare home loan options">Compare home loan options</option>
+                <option value="Start a home loan enquiry" data-subject="Home Loan Enquiry | TheBondStudio Website">Start a home loan enquiry</option>
+                <option value="Compare home loan options" data-subject="Compare Options | TheBondStudio Website">Compare home loan options</option>
             </select>
             <span class="error-message" id="error-loanOption"></span>
         </div>
@@ -182,7 +182,7 @@
 
             try {
                 const body = {
-                    subject: fields.loanOption.value,
+                    subject: fields.loanOption.selectedOptions[0].dataset.subject,
                     name: fields.fullName.value.trim(),
                     emailAddress: fields.emailAddress.value.trim(),
                     phoneNumber: fields.phoneNumber.value.trim(),
