@@ -66,16 +66,17 @@ background: gray
           <dt>After Hours</dt>
           <dd>Send a WhatsApp or email and we will come back to you.</dd>
         </div>
+        <div>
+          <dt>Address</dt>
+          <dd>
+            <address>
+              {{ site.address.street }}<br>
+              {{ site.address.suburb }}<br>
+              {{ site.address.city }}, {{ site.address.postcode }}
+            </address>
+          </dd>
+        </div>
       </dl>
-    </article>
-
-    <article class="contact-info-card">
-      <h2>Where to Find Us</h2>
-      <address>
-        {{ site.address.street }}<br>
-        {{ site.address.suburb }}<br>
-        {{ site.address.city }}, {{ site.address.postcode }}
-      </address>
     </article>
     </section>
 
