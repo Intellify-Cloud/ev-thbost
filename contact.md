@@ -68,14 +68,7 @@ background: gray
         </div>
       </dl>
     </article>
-    </section>
 
-    <div class="contact-layout__form">
-      {% include contact.html %}
-    </div>
-  </div>
-
-  <section class="contact-page__details" aria-label="Contact details">
     <article class="contact-info-card">
       <h2>Where to Find Us</h2>
       <address>
@@ -84,15 +77,10 @@ background: gray
         {{ site.address.city }}, {{ site.address.postcode }}
       </address>
     </article>
+    </section>
 
-    <article class="contact-info-card">
-      <h2>Not Ready to Apply?</h2>
-      <p>
-        Estimate your repayment with our
-        <a href="{{ '/bond-calculator/' | relative_url }}">bond repayment calculator</a>,
-        or see what you may qualify for with our
-        <a href="{{ '/affordability-calculator/' | relative_url }}">affordability calculator</a>.
-      </p>
-    </article>
-  </section>
+    <div class="contact-layout__form">
+      {% include contact.html %}
+    </div>
+  </div>
 </div>
