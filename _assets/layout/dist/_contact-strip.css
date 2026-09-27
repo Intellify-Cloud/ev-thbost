@@ -1,0 +1,108 @@
+.contact-strip {
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+}
+.contact-strip__content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 40px;
+  gap: 1.618rem;
+  /* Golden ratio spacing */
+  padding: 0.618rem 1rem;
+  /* Golden ratio vertical padding */
+}
+.contact-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Golden ratio derived spacing */
+}
+.contact-strip__phone, .contact-strip__email, .contact-strip__whatsapp {
+  display: flex;
+  align-items: center;
+  color: #002d78;
+  /* Updated color */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 0.618rem 1rem;
+  /* Golden ratio padding */
+}
+.contact-strip__phone:hover, .contact-strip__email:hover, .contact-strip__whatsapp:hover {
+  color: #0057ff;
+}
+.contact-strip__icon {
+  margin-right: 0.382rem;
+  /* Golden ratio derived margin */
+  flex-shrink: 0;
+}
+.contact-strip .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+  .contact-strip {
+    font-size: 12px;
+  }
+  .contact-strip__content {
+    flex-direction: column;
+    gap: 0.618rem;
+    /* Reduced golden ratio spacing for mobile */
+    padding: 0.618rem 0.5rem;
+    min-height: auto;
+  }
+  .contact-strip__item {
+    gap: 0.618rem;
+  }
+  .contact-strip__phone, .contact-strip__email, .contact-strip__whatsapp {
+    padding: 0.382rem 0.618rem;
+    /* Smaller golden ratio padding */
+    font-size: 14px;
+  }
+  .contact-strip__icon {
+    margin-right: 0.236rem;
+    /* Smaller golden ratio margin */
+  }
+  .contact-strip .container {
+    padding: 0 0.618rem;
+  }
+}
+/* Tablet adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-strip {
+    font-size: 13px;
+  }
+  .contact-strip__content {
+    gap: 1rem;
+    /* Medium golden ratio spacing */
+    padding: 0.618rem 0.8rem;
+  }
+  .contact-strip__phone, .contact-strip__email, .contact-strip__whatsapp {
+    padding: 0.5rem 0.8rem;
+  }
+}
+/* Large mobile landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-strip__content {
+    gap: 1.236rem;
+    /* Scaled golden ratio */
+    padding: 0.618rem 1rem;
+  }
+}
+/* Ensure text doesn't wrap awkwardly on small screens */
+@media (max-width: 320px) {
+  .contact-strip__phone, .contact-strip__email, .contact-strip__whatsapp {
+    font-size: 10px;
+    padding: 0.236rem 0.382rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+  }
+}

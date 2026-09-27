@@ -1,0 +1,166 @@
+{%- comment -%}
+  ---------------------------------------------------------------------------
+  JSON-LD structured data.
+
+  Identity model:
+    - ONE organisation node (#organization), typed FinancialService because the
+      business is a BOND ORIGINATOR, not a lender. `MortgageLoan` and any
+      lender-implying type are deliberately NOT used.
+    - ONE website node (#website) referencing the organisation as publisher.
+    - A per-page WebPage node linked to both.
+    - BreadcrumbList on inner pages only.
+
+  Only fields with verified values in _config.yml are emitted. Empty values are
+  skipped rather than published as blanks. Review/aggregateRating are omitted
+  because no genuine, visible reviews exist on the site.
+  ---------------------------------------------------------------------------
+{%- endcomment -%}
+
+{%- assign org_id     = site.url | append: '/#organization' -%}
+{%- assign website_id = site.url | append: '/#website' -%}
+
+{%- if page.canonical_url -%}
+  {%- assign page_url = page.canonical_url -%}
+{%- else -%}
+  {%- assign page_url = page.url | replace:'index.html','' | absolute_url -%}
+{%- endif -%}
+
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign page_desc  = page.description | default: site.description -%}
+
+{%- comment -%} Build sameAs from any social profiles that are filled in {%- endcomment -%}
+{%- assign social_list = "" | split: "" -%}
+{%- if site.social.facebook and site.social.facebook != "" -%}{%- assign social_list = social_list | push: site.social.facebook -%}{%- endif -%}
+{%- if site.social.linkedin and site.social.linkedin != "" -%}{%- assign social_list = social_list | push: site.social.linkedin -%}{%- endif -%}
+{%- if site.social.instagram and site.social.instagram != "" -%}{%- assign social_list = social_list | push: site.social.instagram -%}{%- endif -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FinancialService",
+      "@id": {{ org_id | jsonify }},
+      "name": {{ site.company | jsonify }},
+      "alternateName": {{ site.legal_name | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "url": {{ site.url | append: '/' | jsonify }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": {{ site.logo.path | absolute_url | jsonify }}
+      },
+      "image": {{ site.og_image | absolute_url | jsonify }},
+      "telephone": {{ site.telephone | jsonify }},
+      "email": {{ site.email | jsonify }},
+      "priceRange": "Free to the applicant",
+      "currenciesAccepted": "ZAR",
+      "areaServed": [
+        {%- for area in site.service_area -%}
+        { "@type": "Place", "name": {{ area | jsonify }} }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ site.address.street | jsonify }},
+        "addressLocality": {{ site.address.suburb | jsonify }},
+        "addressRegion": {{ site.address.region | jsonify }},
+        "postalCode": {{ site.address.postcode | jsonify }},
+        "addressCountry": {{ site.address.country | jsonify }}
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ site.geo.latitude }},
+        "longitude": {{ site.geo.longitude }}
+      },
+      {%- if site.opening_hours %}
+      "openingHoursSpecification": [
+        {%- for spec in site.opening_hours %}
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": {{ spec.days | jsonify }},
+          "opens": {{ spec.opens | jsonify }},
+          "closes": {{ spec.closes | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ],
+      {%- endif %}
+      {%- if social_list.size > 0 %}
+      "sameAs": {{ social_list | jsonify }},
+      {%- endif %}
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": {{ site.parent_group | jsonify }},
+        "url": {{ site.parent_url | jsonify }}
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": {{ site.telephone | jsonify }},
+          "email": {{ site.email | jsonify }},
+          "areaServed": "ZA",
+          "availableLanguage": ["en"]
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bond origination services",
+        "itemListElement": [
+          {%- for service in site.data.sitetext.services.list %}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": {{ service.title | jsonify }},
+              "description": {{ service.desc | strip_html | normalize_whitespace | strip | jsonify }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {%- endfor %}
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ website_id | jsonify }},
+      "url": {{ site.url | append: '/' | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": {{ site.lang | default: 'en-ZA' | jsonify }},
+      "publisher": { "@id": {{ org_id | jsonify }} }
+    },
+    {
+      "@type": "WebPage",
+      "@id": {{ page_url | append: '#webpage' | jsonify }},
+      "url": {{ page_url | jsonify }},
+      "name": {{ page_title | strip_html | jsonify }},
+      "description": {{ page_desc | strip_html | normalize_whitespace | jsonify }},
+      "isPartOf": { "@id": {{ website_id | jsonify }} },
+      "about": { "@id": {{ org_id | jsonify }} },
+      "inLanguage": {{ site.lang | default: 'en-ZA' | jsonify }}
+      {%- if page.url != "/" %},
+      "breadcrumb": { "@id": {{ page_url | append: '#breadcrumb' | jsonify }} }
+      {%- endif %}
+    }
+    {%- if page.url != "/" -%},
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ page_url | append: '#breadcrumb' | jsonify }},
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {{ site.url | append: '/' | jsonify }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page_title | strip_html | jsonify }},
+          "item": {{ page_url | jsonify }}
+        }
+      ]
+    }
+    {%- endif -%}
+  ]
+}
+</script>

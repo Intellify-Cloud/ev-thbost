@@ -1,0 +1,9 @@
+Configuration file: C:/Anti-Gravity Skills/ev-thbost/_config.yml
+            Source: C:/Anti-Gravity Skills/ev-thbost
+       Destination: C:/Anti-Gravity Skills/ev-thbost/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.743 seconds.
+ Auto-regeneration: enabled for 'C:/Anti-Gravity Skills/ev-thbost'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.

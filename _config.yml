@@ -1,0 +1,143 @@
+# ---------------------------------------------------------------------------
+# Site identity
+# ---------------------------------------------------------------------------
+# NOTE: `url` must match the CNAME file and the live production domain.
+# Never point this at a localhost, preview or legacy domain: it is the source
+# of truth for canonical tags, Open Graph URLs, structured data and sitemap.
+url    : https://thebondstudio.co.za
+baseurl: ""
+
+title      : "The Bond Studio"
+tagline    : "Bond Origination & Home Loan Experts"
+description: "The Bond Studio is a bond originator in Cape Town. We submit your home loan application to multiple banks, including your own, and negotiate your interest rate. Free to you."
+
+locale     : en_ZA
+lang       : en-ZA
+
+author     : E.Roux / P.Oosthuizen
+
+# ---------------------------------------------------------------------------
+# Business details (single source of truth - used in structured data + footer)
+# ---------------------------------------------------------------------------
+company      : The Bond Studio
+group        : The Bond Studio
+legal_name   : The Bond Studio
+business_type: Bond originator          # NOT a lender - we submit to banks
+parent_group : evo Home Loans
+parent_url   : https://evohomeloans.co.za
+
+email    : grant@thebondstudio.co.za
+telephone: "+27813039611"
+telephone_display: "081 303 9611"
+whatsapp : "https://wa.me/27813039611"
+
+address:
+  street  : "Werkhuis, First Floor, Kildare Centre, 63 Main Street"
+  suburb  : "Newlands"
+  city    : "Cape Town"
+  region  : "Western Cape"
+  postcode: "7700"
+  country : "ZA"
+
+geo:
+  latitude : -33.9769
+  longitude: 18.4553
+
+service_area:
+  - Cape Town
+  - Western Cape
+  - South Africa
+
+opening_hours:
+  - days: ["Monday","Tuesday","Wednesday","Thursday","Friday"]
+    opens: "08:30"
+    closes: "17:00"
+
+# Social profiles - add verified URLs only (used for schema sameAs)
+social:
+  facebook : ""
+  linkedin : ""
+  instagram: ""
+
+logo:
+  path: /assets/img/logo/bond-squad-logo.png
+
+# Default social sharing image (must exist at site root)
+og_image: /social_916x509.jpg
+
+# ---------------------------------------------------------------------------
+# Search engine / webmaster verification
+# ---------------------------------------------------------------------------
+# Add the token only (not the full meta tag). Leave blank to omit the tag.
+google_site_verification: ""
+bing_site_verification  : ""
+# IndexNow key: create /<key>.txt at the site root containing the same key.
+indexnow_key            : ""
+
+analytics:
+  google: G-XXX
+
+# ---------------------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------------------
+# DO NOT add a `.nojekyll` file at the repo root.
+# This site is published by GitHub Pages as *Jekyll source*, not as a prebuilt
+# `_site` folder (`_site` is gitignored and never committed). A `.nojekyll`
+# file disables Jekyll processing, so GitHub Pages then publishes the raw
+# source tree instead: page front matter and Liquid tags become visible text,
+# `permalink` pretty URLs (`/about/`, `/contact-test/`) 404, and internal files
+# such as `_config.yml`, `*.md` and `docs/` are exposed publicly.
+# Always deploy the Jekyll build output, never the repository root.
+collections:
+  portfolio:
+    output: false
+
+markdown: kramdown
+
+sass:
+  style: compressed
+
+webserver_headers:
+  - - Access-Control-Allow-Origin
+    - "*"
+  - - Access-Control-Allow-Methods
+    - GET, OPTIONS, HEAD
+
+exclude:
+  - node_modules
+  - webpack.config.js
+  - webpack-config.js
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - seo-guru.md
+  - _assets
+  - "favicon(old).png"
+  # Jekyll 3 (github-pages gem) drops its default excludes once this list is
+  # set, so the gems CI installs into vendor/bundle must be excluded here.
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
+  # Internal project and tooling files - must never be published to the web.
+  # (Anything starting with "_" or "." is already ignored by Jekyll, but these
+  # are listed explicitly so the intent is documented and protected.)
+  - docs
+  - jekyll-serve.out.log
+  - jekyll-serve.err.log
+  - .devcontainer
+  - .github
+  - .kilo
+  - .vscode
+  - .gitattributes
+  - .gitignore
+
+broadsheetApiUrl: https://api.broadsheet.intellify.co.za/v1/messages
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      noindex: false

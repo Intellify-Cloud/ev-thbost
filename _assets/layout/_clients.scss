@@ -1,0 +1,50 @@
+#clients {
+  position: relative;
+  z-index: 1;
+
+  .client-logo-card {
+    width: 110px;
+    min-height: 110px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .06);
+    margin: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  .client-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .client-logo-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: grayscale(0%);
+    transition: filter 0.3s ease;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+
+  // add 50px below the *last heading* in this section
+  .section-heading:last-of-type {
+    margin-bottom: 50px;
+  }
+}
