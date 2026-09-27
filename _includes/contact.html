@@ -218,6 +218,12 @@
 
         form.addEventListener('submit', handleSubmit);
 
+        // Start typing straight away on desktop. Skipped on small screens,
+        // where focusing would open the keyboard and jump past the intro.
+        if (window.matchMedia('(min-width: 992px)').matches) {
+            fields.fullName.focus({ preventScroll: true });
+        }
+
         Object.keys(errors).forEach(function (key) {
             fields[key].addEventListener('input', function () {
                 if (this.value.trim()) {
