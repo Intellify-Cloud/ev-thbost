@@ -50,8 +50,11 @@ service_area:
 
 opening_hours:
   - days: ["Monday","Tuesday","Wednesday","Thursday","Friday"]
-    opens: "08:30"
+    opens: "08:00"
     closes: "17:00"
+  - days: ["Saturday"]
+    opens: "09:00"
+    closes: "13:00"
 
 # Social profiles - add verified URLs only (used for schema sameAs)
 social:

@@ -191,7 +191,7 @@ team:
         social:
           - url: tel:083 676 0912
             icon: fas fa-phone
-          - url: mailto:hayley.craig@evogroup.co.za?subject=Bond Squad Website Enquiry
+          - url: mailto:hayley.craig@evogroup.co.za?subject=Home Loan Enquiry | TheBondStudio Website
             icon: fas fa-envelope
           - url: https://wa.me/+27836760912
             icon: fab fa-whatsapp
@@ -207,7 +207,7 @@ team:
         social:
           - url: tel:083 275 2856
             icon: fas fa-phone
-          - url: mailto:lara.patterson@evogroup.co.za?subject=Bond Squad Website Enquiry
+          - url: mailto:lara.patterson@evogroup.co.za?subject=Home Loan Enquiry | TheBondStudio Website
             icon: fas fa-envelope
           - url: https://wa.me/+27832752856
             icon: fab fa-whatsapp

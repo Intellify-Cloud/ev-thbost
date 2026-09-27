@@ -8,3 +8,5 @@ _site
 Gemfile.lock
 unused
 bootstrap-reference.html
+# Local Kilo Code plans and worktrees
+.kilo/
