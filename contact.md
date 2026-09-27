@@ -18,46 +18,35 @@ background: gray
     </p>
   </header>
 
-  <div class="contact-page__form">
-    {% include contact.html %}
-  </div>
-
-  <section class="contact-page__grid" aria-label="Contact options">
-    <article class="contact-card contact-card--primary">
-      <div class="contact-card__icon" aria-hidden="true">
-        <i class="fab fa-whatsapp"></i>
-      </div>
-      <h2>WhatsApp</h2>
-      <p>Fastest for new enquiries, documents and quick questions.</p>
-      <a class="contact-card__button" href="{{ site.whatsapp }}" target="_blank" rel="noopener noreferrer">
-        Message us on WhatsApp
+  <div class="contact-layout">
+    <section class="contact-layout__direct" aria-label="Contact us directly">
+      <a class="contact-card contact-card--primary" href="{{ site.whatsapp }}" target="_blank" rel="noopener noreferrer">
+        <span class="contact-card__icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></span>
+        <span class="contact-card__body">
+          <span class="contact-card__title">WhatsApp</span>
+          <span class="contact-card__text">Fastest for new enquiries, documents and quick questions.</span>
+          <span class="contact-card__action">Message us on WhatsApp</span>
+        </span>
       </a>
-    </article>
 
-    <article class="contact-card">
-      <div class="contact-card__icon" aria-hidden="true">
-        <i class="fas fa-phone"></i>
-      </div>
-      <h2>Call Grant</h2>
-      <p>Speak directly with Grant Acutt, Founder &amp; Director of {{ site.company }}.</p>
-      <a class="contact-card__button" href="tel:{{ site.telephone }}">
-        {{ site.telephone_display }}
+      <a class="contact-card" href="tel:{{ site.telephone }}">
+        <span class="contact-card__icon" aria-hidden="true"><i class="fas fa-phone"></i></span>
+        <span class="contact-card__body">
+          <span class="contact-card__title">Call Grant</span>
+          <span class="contact-card__text">Speak directly with Grant Acutt, Founder &amp; Director of {{ site.company }}.</span>
+          <span class="contact-card__action">{{ site.telephone_display }}</span>
+        </span>
       </a>
-    </article>
 
-    <article class="contact-card">
-      <div class="contact-card__icon" aria-hidden="true">
-        <i class="fas fa-envelope"></i>
-      </div>
-      <h2>Email</h2>
-      <p>Best for detailed questions or when you want to attach supporting documents.</p>
-      <a class="contact-card__button" href="mailto:{{ site.email }}?subject=Home loan enquiry from The Bond Studio website">
-        {{ site.email }}
+      <a class="contact-card" href="mailto:{{ site.email }}?subject=Home loan enquiry from The Bond Studio website">
+        <span class="contact-card__icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+        <span class="contact-card__body">
+          <span class="contact-card__title">Email</span>
+          <span class="contact-card__text">Best for detailed questions or when you want to attach documents.</span>
+          <span class="contact-card__action">{{ site.email }}</span>
+        </span>
       </a>
-    </article>
-  </section>
 
-  <section class="contact-page__details" aria-label="Contact details">
     <article class="contact-info-card">
       <h2>Office Hours</h2>
       <dl>
@@ -79,7 +68,14 @@ background: gray
         </div>
       </dl>
     </article>
+    </section>
 
+    <div class="contact-layout__form">
+      {% include contact.html %}
+    </div>
+  </div>
+
+  <section class="contact-page__details" aria-label="Contact details">
     <article class="contact-info-card">
       <h2>Where to Find Us</h2>
       <address>
@@ -88,41 +84,9 @@ background: gray
         {{ site.address.city }}, {{ site.address.postcode }}
       </address>
     </article>
-  </section>
 
-  <section class="contact-process" aria-label="What happens after you contact us">
-    <div class="contact-process__header">
-      <p class="contact-page__eyebrow">What happens next</p>
-      <h2>From enquiry to bank offers</h2>
-    </div>
-
-    <ol class="contact-process__steps">
-      <li>
-        <span>1</span>
-        <p>We contact you to understand your income, deposit and the property you have in mind.</p>
-      </li>
-      <li>
-        <span>2</span>
-        <p>We confirm the supporting documents each bank will need from you.</p>
-      </li>
-      <li>
-        <span>3</span>
-        <p>We submit your application to multiple banks, including your own bank.</p>
-      </li>
-      <li>
-        <span>4</span>
-        <p>We negotiate on the offers received and explain each one clearly.</p>
-      </li>
-      <li>
-        <span>5</span>
-        <p>You choose the home loan offer that suits you best.</p>
-      </li>
-    </ol>
-  </section>
-
-  <section class="contact-page__support" aria-label="Useful next steps">
-    <article>
-      <h2>Not ready to apply?</h2>
+    <article class="contact-info-card">
+      <h2>Not Ready to Apply?</h2>
       <p>
         Estimate your repayment with our
         <a href="{{ '/bond-calculator/' | relative_url }}">bond repayment calculator</a>,
@@ -130,13 +94,5 @@ background: gray
         <a href="{{ '/affordability-calculator/' | relative_url }}">affordability calculator</a>.
       </p>
     </article>
-
-    <p class="contact-page__legal">
-      By starting an enquiry you agree that we may share your information with banks and
-      lending partners in order to apply for a home loan on your behalf. See our
-      <a href="{{ '/data-sharing-agreement/' | relative_url }}">data sharing agreement</a> and
-      <a href="{{ '/privacy-statement/' | relative_url }}">privacy statement</a>.
-      Approval, interest rates and final terms are decided by each bank.
-    </p>
   </section>
 </div>

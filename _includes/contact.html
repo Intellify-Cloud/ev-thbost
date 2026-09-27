@@ -1,192 +1,88 @@
-<!-- Contact -->
-<section class="bg-light contact-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Contact</h2>
-                <h3 class="section-subheading text-muted"></h3>
+<!-- Contact form card -->
+<section class="enquiry-card" aria-labelledby="enquiry-title">
+    <form id="contactForm" class="enquiry-form" novalidate>
+        <header class="enquiry-card__header">
+            <h2 id="enquiry-title">Send us an enquiry</h2>
+            <p>Tell us a little about what you need and we will get back to you.</p>
+        </header>
+
+        <!-- Honeypot: hidden from people, filled in by spam bots -->
+        <div class="enquiry-form__trap" aria-hidden="true">
+            <label for="location">Location</label>
+            <input id="location" name="location" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+            <label for="fullName">Name and surname *</label>
+            <input id="fullName" name="fullName" type="text" class="form-control" autocomplete="name" />
+            <span class="error-message" id="error-fullName"></span>
+        </div>
+
+        <div class="enquiry-form__row">
+            <div class="form-group">
+                <label for="emailAddress">Email address *</label>
+                <input id="emailAddress" name="emailAddress" type="email" class="form-control" autocomplete="email" />
+                <span class="error-message" id="error-emailAddress"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone number <span class="enquiry-form__optional">(optional)</span></label>
+                <input id="phoneNumber" name="phoneNumber" type="tel" class="form-control" autocomplete="tel" />
+                <span class="error-message"></span>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <form id="contactForm" class="contact-form">
-                    <div style="position: absolute; left: -9999px;" aria-hidden="true">
-                        <label for="location">Location</label>
-                        <input id="location" name="location" type="text" tabindex="-1" autocomplete="off" />
-                    </div>
 
-                    <div class="form-group">
-                        <label for="fullName">Name and Surname *</label>
-                        <input id="fullName" name="fullName" type="text" class="form-control" autocomplete="name" />
-                        <span class="error-message" id="error-fullName"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="emailAddress">Email Address *</label>
-                        <input id="emailAddress" name="emailAddress" type="email" class="form-control" />
-                        <span class="error-message" id="error-emailAddress"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phoneNumber">Phone Number (optional)</label>
-                        <input id="phoneNumber" name="phoneNumber" type="tel" class="form-control" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="loanOption">I want to *</label>
-                        <select id="loanOption" name="loanOption" class="form-control" style="accent-color: #19a3b8;">
-                            <option value="">Please select an option</option>
-                            <option value="Start a home loan enquiry">Start a home loan enquiry</option>
-                            <option value="Compare home loan options">Compare home loan options</option>
-                        </select>
-                        <span class="error-message" id="error-loanOption"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="content">Message *</label>
-                        <textarea id="content" name="content" rows="5" class="form-control"></textarea>
-                        <span class="error-message" id="error-content"></span>
-                    </div>
-
-                    <div id="status-sent" class="status-message success" style="display: none;">
-                        Thank you! Your message has been sent successfully.
-                    </div>
-                    <div id="status-error" class="status-message error" style="display: none;">
-                        Sorry, there was an error sending your message. Please try again.
-                    </div>
-
-                    <button type="submit" id="submitBtn" class="btn btn-primary">
-                        Send Message
-                    </button>
-                </form>
-            </div>
+        <div class="form-group">
+            <label for="loanOption">I want to *</label>
+            <select id="loanOption" name="loanOption" class="form-control">
+                <option value="">Please select an option</option>
+                <option value="Start a home loan enquiry">Start a home loan enquiry</option>
+                <option value="Compare home loan options">Compare home loan options</option>
+            </select>
+            <span class="error-message" id="error-loanOption"></span>
         </div>
+
+        <div class="form-group">
+            <label for="content">Message *</label>
+            <textarea id="content" name="content" rows="5" class="form-control"></textarea>
+            <span class="error-message" id="error-content"></span>
+        </div>
+
+        <div id="status-error" class="enquiry-form__error" role="alert" hidden>
+            Sorry, your message could not be sent. Please try again, or WhatsApp us on {{ site.telephone_display }}.
+        </div>
+
+        <button type="submit" id="submitBtn" class="enquiry-form__submit">Send message</button>
+
+        <p class="enquiry-form__legal">
+            By sending an enquiry you agree that we may share your information with banks and
+            lending partners in order to apply for a home loan on your behalf. See our
+            <a href="{{ '/data-sharing-agreement/' | relative_url }}">data sharing agreement</a> and
+            <a href="{{ '/privacy-statement/' | relative_url }}">privacy statement</a>.
+            Approval, interest rates and final terms are decided by each bank.
+        </p>
+    </form>
+
+    <div id="enquiry-success" class="enquiry-success" tabindex="-1" hidden>
+        <div class="enquiry-success__icon" aria-hidden="true"><i class="fas fa-check"></i></div>
+        <h2>Thank you<span id="enquiry-success-name"></span>, your enquiry is with us.</h2>
+        <p>We will be in touch soon. Here is what happens from here.</p>
+
+        <ol class="enquiry-steps">
+            <li>We contact you to understand your income, deposit and the property you have in mind.</li>
+            <li>We confirm the supporting documents each bank will need from you.</li>
+            <li>We submit your application to multiple banks, including your own bank.</li>
+            <li>We negotiate on the offers received and explain each one clearly.</li>
+            <li>You choose the home loan offer that suits you best.</li>
+        </ol>
+
+        <p class="enquiry-success__meanwhile">
+            In the meantime, see what you may qualify for with our
+            <a href="{{ '/affordability-calculator/' | relative_url }}">affordability calculator</a>.
+        </p>
     </div>
 </section>
-<!-- End Contact -->
-
-<style>
-    .contact-section {
-        padding: 20px;
-    }
-
-    .contact-form {
-        width: 100%;
-        max-width: 600px;
-        text-align: left;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .form-group {
-        margin-bottom: 0.25rem;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-    }
-
-    .form-control {
-        width: 100%;
-        /* padding: 0.75rem; */
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 1rem;
-        font-family: inherit;
-        transition: border-color 0.2s;
-    }
-
-    .form-control:focus {
-        outline: none;
-        border-color: #19a3b8;
-        box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
-    }
-
-    .form-control.error {
-        border-color: #d32f2f;
-    }
-
-    select.form-control {
-        cursor: pointer;
-        accent-color: white;
-        appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 0.75rem center;
-        padding-right: 2.5rem;
-
-        option {
-            background-color: white;
-            color: #333;
-            padding: 0.5rem;
-        }
-    }
-
-    textarea.form-control {
-        resize: vertical;
-        min-height: 120px;
-    }
-
-    .error-message {
-        display: block;
-        color: #d32f2f;
-        font-size: 0.875rem;
-        margin-top: 0.25rem;
-        min-height: 1.25rem;
-    }
-
-    .status-message {
-        padding: 1rem;
-        border-radius: 4px;
-        margin-bottom: 1rem;
-        font-size: 0.95rem;
-    }
-
-    .status-message.success {
-        background-color: #e8f5e9;
-        color: #2e7d32;
-        border: 1px solid #a5d6a7;
-    }
-
-    .status-message.error {
-        background-color: #ffebee;
-        color: #c62828;
-        border: 1px solid #ef9a9a;
-    }
-
-    .btn {
-        padding: 0.75rem 1.5rem;
-        border-radius: 50px;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
-        font-weight: 400;
-    }
-
-    .btn-primary {
-        background-color: #19a3b8;
-        color: white;
-        border: none;
-    }
-
-    .btn-primary:hover:not(:disabled) {
-        transform: translateY(-1px);
-    }
-
-    .btn-primary:disabled {
-        background-color: #90caf9;
-        cursor: not-allowed;
-    }
-
-    @media (min-width: 768px) {
-        .contact-form {
-            width: 50%;
-        }
-    }
-</style>
+<!-- End contact form card -->
 
 <script>
     (function () {
@@ -196,8 +92,9 @@
         const API_URL = '{{ site.broadsheetApiUrl | default: "https://api.broadsheet.intellify.co.za/v1/messages" }}';
 
         const submitBtn = document.getElementById('submitBtn');
-        const statusSent = document.getElementById('status-sent');
         const statusError = document.getElementById('status-error');
+        const success = document.getElementById('enquiry-success');
+        const successName = document.getElementById('enquiry-success-name');
 
         const fields = {
             fullName: document.getElementById('fullName'),
@@ -220,8 +117,7 @@
                 errors[key].textContent = '';
                 fields[key].classList.remove('error');
             });
-            statusSent.style.display = 'none';
-            statusError.style.display = 'none';
+            statusError.hidden = true;
         }
 
         function setError(field, message) {
@@ -264,9 +160,14 @@
             return re.test(email);
         }
 
-        function resetForm() {
+        function showSuccess(name) {
+            const firstName = name.split(/\s+/)[0];
+            successName.textContent = firstName ? ' ' + firstName : '';
             form.reset();
-            clearErrors();
+            form.hidden = true;
+            success.hidden = false;
+            success.focus({ preventScroll: true });
+            success.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         async function handleSubmit(e) {
@@ -278,7 +179,6 @@
 
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
-            clearErrors();
 
             try {
                 const body = {
@@ -303,32 +203,28 @@
                     throw new Error('Network response was not ok');
                 }
 
-                resetForm();
-                statusSent.style.display = 'block';
-                statusSent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                showSuccess(body.name);
 
             } catch (error) {
                 console.error('Error submitting form:', error);
-                statusError.style.display = 'block';
+                statusError.hidden = false;
                 statusError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
+                submitBtn.textContent = 'Send message';
             }
         }
 
         form.addEventListener('submit', handleSubmit);
 
-        Object.keys(fields).forEach(function (key) {
-            if (errors[key]) {
-                fields[key].addEventListener('input', function () {
-                    if (this.value.trim() || (this.tagName === 'SELECT' && this.value)) {
-                        errors[key].textContent = '';
-                        this.classList.remove('error');
-                    }
-                });
-            }
+        Object.keys(errors).forEach(function (key) {
+            fields[key].addEventListener('input', function () {
+                if (this.value.trim()) {
+                    errors[key].textContent = '';
+                    this.classList.remove('error');
+                }
+            });
         });
 
     })();

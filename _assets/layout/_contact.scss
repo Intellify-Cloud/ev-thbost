@@ -97,54 +97,56 @@ section#contact {
   line-height: 1.75;
 }
 
-.contact-page__grid {
+// Two columns: direct contact cards | enquiry form card
+.contact-layout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: start;
+}
+
+.contact-layout__direct {
+  display: grid;
+  gap: 1rem;
 }
 
 .contact-card,
 .contact-info-card,
-.contact-process,
-.contact-page__support {
+.enquiry-card {
   background: #fff;
   border: 1px solid rgba(0, 51, 102, 0.1);
   border-radius: 8px;
   box-shadow: 0 12px 30px rgba(0, 45, 98, 0.08);
 }
 
-.contact-card {
+.contact-page a.contact-card {
   display: flex;
-  min-height: 100%;
-  padding: 1.5rem;
-  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  align-items: flex-start;
+  color: inherit;
+  font-weight: 400;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 
-  h2 {
-    margin: 0 0 0.5rem;
-    color: #002d62;
-    font-size: 1.35rem;
-    line-height: 1.25;
-  }
-
-  p {
-    margin: 0 0 1.25rem;
-    color: #45627c;
-    font-size: 0.98rem;
-    line-height: 1.65;
+  &:hover,
+  &:focus {
+    color: inherit;
+    border-color: rgba(0, 172, 200, 0.45);
+    box-shadow: 0 16px 36px rgba(0, 172, 200, 0.16);
+    transform: translateY(-2px);
   }
 }
 
 .contact-card--primary {
   border-color: rgba(0, 172, 200, 0.35);
-  box-shadow: 0 16px 36px rgba(0, 172, 200, 0.13);
 }
 
 .contact-card__icon {
   display: flex;
-  width: 44px;
+  flex: 0 0 44px;
   height: 44px;
-  margin-bottom: 1rem;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -153,20 +155,254 @@ section#contact {
   font-size: 1.2rem;
 }
 
-.contact-card__button {
-  display: inline-flex;
-  width: fit-content;
-  max-width: 100%;
-  margin-top: auto;
-  align-items: center;
+.contact-card--primary .contact-card__icon {
+  background: #00acc8;
+  color: #fff;
+}
+
+.contact-card__body {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.contact-card__title {
+  margin-bottom: 0.25rem;
+  color: #002d62;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.contact-card__text {
+  margin-bottom: 0.5rem;
+  color: #45627c;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.contact-card__action {
+  color: #008fa3;
+  font-weight: 600;
   overflow-wrap: anywhere;
 }
 
+// Enquiry form card
+.enquiry-card {
+  padding: 2rem;
+  scroll-margin-top: 6rem;
+}
+
+.enquiry-card__header {
+  margin-bottom: 1.5rem;
+
+  h2 {
+    margin: 0 0 0.35rem;
+    color: #002d62;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  p {
+    margin: 0;
+    color: #45627c;
+    font-size: 1rem;
+  }
+}
+
+.enquiry-form {
+  .form-group {
+    margin-bottom: 0.35rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #002d62;
+    font-weight: 600;
+  }
+
+  .form-control {
+    height: auto;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #cfd8e3;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+      border-color: #00acc8;
+      box-shadow: 0 0 0 3px rgba(0, 172, 200, 0.15);
+      outline: none;
+    }
+
+    &.error {
+      border-color: #d32f2f;
+    }
+  }
+
+  select.form-control {
+    padding-right: 2.5rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23002d62' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-position: right 0.9rem center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  textarea.form-control {
+    min-height: 130px;
+    resize: vertical;
+  }
+
+  .error-message {
+    display: block;
+    min-height: 1.25rem;
+    margin-top: 0.2rem;
+    color: #d32f2f;
+    font-size: 0.85rem;
+  }
+}
+
+.enquiry-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1rem;
+}
+
+.enquiry-form__optional {
+  color: #6b8299;
+  font-weight: 400;
+}
+
+.enquiry-form__trap {
+  position: absolute;
+  left: -9999px;
+}
+
+.enquiry-form__error {
+  margin-bottom: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ef9a9a;
+  border-radius: 6px;
+  background: #ffebee;
+  color: #c62828;
+  font-size: 0.95rem;
+}
+
+.enquiry-form__submit {
+  padding: 0.8rem 2rem;
+  border: 0;
+  border-radius: 50px;
+  background: #00acc8;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.2s;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    background: #008fa3;
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.enquiry-form__legal {
+  margin: 1.25rem 0 0;
+  color: #6b8299;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+// Shown in place of the form once an enquiry is sent
+.enquiry-success {
+  outline: none;
+
+  h2 {
+    margin: 0 0 0.5rem;
+    color: #002d62;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  > p {
+    color: #45627c;
+    font-size: 1rem;
+  }
+}
+
+.enquiry-success__icon {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #00acc8;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.enquiry-steps {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+
+  li {
+    position: relative;
+    padding: 0 0 1.1rem 3rem;
+    color: #21415f;
+    line-height: 1.6;
+    counter-increment: step;
+
+    &::before {
+      position: absolute;
+      top: -0.1rem;
+      left: 0;
+      display: flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(0, 172, 200, 0.12);
+      color: #008fa3;
+      font-weight: 700;
+      content: counter(step);
+    }
+
+    // Line joining the numbered steps
+    &:not(:last-child)::after {
+      position: absolute;
+      top: 2.1rem;
+      bottom: 0.1rem;
+      left: 15px;
+      width: 2px;
+      background: rgba(0, 172, 200, 0.2);
+      content: "";
+    }
+  }
+}
+
+.enquiry-success__meanwhile {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 51, 102, 0.1);
+  font-size: 0.95rem;
+}
+
+// Office hours, address, calculators
 .contact-page__details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
+  gap: 1.5rem;
 }
 
 .contact-info-card {
@@ -175,125 +411,43 @@ section#contact {
   h2 {
     margin: 0 0 1rem;
     color: #002d62;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.3;
   }
 
   address,
-  dd {
-    margin: 0;
-    color: #45627c;
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  dl {
-    display: grid;
-    gap: 0.9rem;
-    margin: 0;
-  }
-
-  dt {
-    margin-bottom: 0.15rem;
-    color: #002d62;
-    font-weight: 700;
-  }
-}
-
-.contact-process {
-  margin-bottom: 1.25rem;
-  padding: 1.75rem;
-}
-
-.contact-process__header {
-  max-width: 680px;
-  margin-bottom: 1.25rem;
-
-  h2 {
-    margin: 0;
-    color: #002d62;
-    font-size: clamp(1.45rem, 2.5vw, 2rem);
-    line-height: 1.25;
-  }
-}
-
-.contact-process__steps {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  li {
-    min-width: 0;
-  }
-
-  span {
-    display: flex;
-    width: 34px;
-    height: 34px;
-    margin-bottom: 0.75rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #00acc8;
-    color: #fff;
-    font-size: 0.95rem;
-    font-weight: 700;
-  }
-
-  p {
-    margin: 0;
-    color: #45627c;
-    font-size: 0.94rem;
-    line-height: 1.6;
-  }
-}
-
-.contact-page__support {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: 1.5rem;
-  padding: 1.5rem;
-  align-items: start;
-
-  h2 {
-    margin: 0 0 0.5rem;
-    color: #002d62;
-    font-size: 1.25rem;
-    line-height: 1.3;
-  }
-
+  dd,
   p {
     margin: 0;
     color: #45627c;
     font-size: 0.96rem;
     line-height: 1.7;
   }
-}
 
-.contact-page__legal {
-  padding-left: 1.25rem;
-  border-left: 4px solid #00acc8;
+  dl {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+  }
+
+  dt {
+    color: #002d62;
+    font-weight: 700;
+  }
 }
 
 @media (max-width: 991.98px) {
-  .contact-page__grid,
-  .contact-process__steps {
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
-  .contact-page__details,
-  .contact-page__support {
-    grid-template-columns: 1fr;
+  // Form first on smaller screens: it is the main action
+  .contact-layout__form {
+    order: -1;
   }
 
-  .contact-page__legal {
-    padding-left: 0;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(0, 51, 102, 0.12);
-    border-left: 0;
+  .contact-page__details {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -310,10 +464,11 @@ section#contact {
     font-size: 1rem;
   }
 
-  .contact-card,
-  .contact-info-card,
-  .contact-process,
-  .contact-page__support {
-    padding: 1.15rem;
+  .enquiry-card {
+    padding: 1.25rem;
+  }
+
+  .enquiry-form__row {
+    grid-template-columns: 1fr;
   }
 }
