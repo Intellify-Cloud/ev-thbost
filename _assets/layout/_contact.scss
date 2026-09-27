@@ -105,9 +105,44 @@ section#contact {
   align-items: start;
 }
 
-.contact-layout__direct {
+.contact-layout__info,
+.contact-layout__direct,
+.contact-layout__details {
   display: grid;
   gap: 1rem;
+}
+
+// Without the form: contact options across the top, details below
+.contact-layout--no-form {
+  grid-template-columns: 1fr;
+
+  .contact-layout__info {
+    gap: 1.5rem;
+  }
+
+  .contact-layout__direct {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .contact-layout__details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .enquiry-steps {
+    margin: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .contact-layout--no-form {
+    .contact-layout__direct,
+    .contact-layout__details {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .contact-card,

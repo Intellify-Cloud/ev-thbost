@@ -137,6 +137,10 @@ exclude:
   - .gitattributes
   - .gitignore
 
+# Contact form on /contact/. Set to false to hide it; the page then shows the
+# direct contact options and "what happens next" instead.
+contact_form: false
+
 broadsheetApiUrl: https://api.broadsheet.intellify.co.za/v1/messages
 
 defaults:

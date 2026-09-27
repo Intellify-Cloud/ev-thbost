@@ -18,7 +18,8 @@ background: gray
     </p>
   </header>
 
-  <div class="contact-layout">
+  <div class="contact-layout{% unless site.contact_form %} contact-layout--no-form{% endunless %}">
+    <div class="contact-layout__info">
     <section class="contact-layout__direct" aria-label="Contact us directly">
       <a class="contact-card contact-card--primary" href="{{ site.whatsapp }}" target="_blank" rel="noopener noreferrer">
         <span class="contact-card__icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></span>
@@ -46,7 +47,9 @@ background: gray
           <span class="contact-card__action">{{ site.email }}</span>
         </span>
       </a>
+    </section>
 
+    <div class="contact-layout__details">
     <article class="contact-info-card">
       <h2>Office Hours</h2>
       <dl>
@@ -78,10 +81,20 @@ background: gray
         </div>
       </dl>
     </article>
-    </section>
 
+    {%- unless site.contact_form %}
+    <article class="contact-info-card">
+      <h2>What Happens Next</h2>
+      {% include enquiry-steps.html %}
+    </article>
+    {%- endunless %}
+    </div>
+    </div>
+
+    {%- if site.contact_form %}
     <div class="contact-layout__form">
       {% include contact.html %}
     </div>
+    {%- endif %}
   </div>
 </div>
