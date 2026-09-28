@@ -139,8 +139,13 @@ exclude:
 
 # Contact form on /contact/. Set to false to hide it; the page then shows the
 # direct contact options and "what happens next" instead.
-contact_form: false
+contact_form: true
 
+# Intellify Contact API. contactSiteId must match a site in the API's wrangler.toml.
+contactApiUrl: https://intellify-contact-api.intellify.workers.dev/api/contact
+contactSiteId: thebondstudio.co.za
+
+# Still used by the hidden /contact-test/ page.
 broadsheetApiUrl: https://api.broadsheet.intellify.co.za/v1/messages
 
 defaults:

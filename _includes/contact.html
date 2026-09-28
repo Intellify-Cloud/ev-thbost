@@ -83,7 +83,8 @@
         'use strict';
 
         const form = document.getElementById('contactForm');
-        const API_URL = '{{ site.broadsheetApiUrl | default: "https://api.broadsheet.intellify.co.za/v1/messages" }}';
+        const API_URL = '{{ site.contactApiUrl }}';
+        const SITE_ID = '{{ site.contactSiteId }}';
 
         const submitBtn = document.getElementById('submitBtn');
         const statusError = document.getElementById('status-error');
@@ -171,17 +172,24 @@
                 return;
             }
 
+            const name = fields.fullName.value.trim();
+
+            // Honeypot filled in: a bot. Show success without sending anything.
+            if (fields.location.value) {
+                showSuccess(name);
+                return;
+            }
+
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
 
             try {
                 const body = {
-                    subject: fields.loanOption.selectedOptions[0].dataset.subject,
-                    name: fields.fullName.value.trim(),
-                    emailAddress: fields.emailAddress.value.trim(),
-                    phoneNumber: fields.phoneNumber.value.trim(),
-                    location: fields.location.value,
-                    content: fields.content.value.trim()
+                    site: SITE_ID,
+                    name: name,
+                    email: fields.emailAddress.value.trim(),
+                    phone: fields.phoneNumber.value.trim(),
+                    message: 'Enquiry type: ' + fields.loanOption.value + '\n\n' + fields.content.value.trim()
                 };
 
                 const response = await fetch(API_URL, {
@@ -197,7 +205,7 @@
                     throw new Error('Network response was not ok');
                 }
 
-                showSuccess(body.name);
+                showSuccess(name);
 
             } catch (error) {
                 console.error('Error submitting form:', error);
